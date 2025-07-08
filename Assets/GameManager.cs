@@ -5,6 +5,8 @@ public class GameManager : MonoBehaviour
 {
     public GameObject[] itemPrefabs; // 3개의 아이템 프리팹
     public Transform gridParent;     // 아이템을 배치할 부모
+    public GameObject[] goodEffectPrefabs; // good 이미지 프리팹
+    public Canvas uiCanvas; // UI 캔버스 참조
     public float swapDuration = 0.3f;    // 스왑 애니메이션 시간
     public float destroyDuration = 0.5f; // 삭제 애니메이션 시간
     public float refillDuration = 0.4f;  // 리필 애니메이션 시간
@@ -30,6 +32,22 @@ public class GameManager : MonoBehaviour
                 cell.Init(x, y, itemId, this);
                 board[x, y] = go;
             }
+        }
+
+        StartCoroutine(CheckInitialBoard());
+    }
+
+    IEnumerator CheckInitialBoard()
+    {
+        // 한 프레임 대기 (모든 아이템 초기화 완료 대기)
+        yield return null;
+
+        // 가능한 움직임이 없으면 셔플
+        if (!HasPossibleMoves())
+        {
+            Debug.Log("🔄 초기 보드에 가능한 움직임이 없습니다! 자동 셔플 중...");
+            yield return StartCoroutine(ShowShuffleMessage());
+            yield return StartCoroutine(ShuffleBoard());
         }
     }
 
@@ -214,8 +232,13 @@ public class GameManager : MonoBehaviour
                 toDestroy.Add(board[0, y]);
                 toDestroy.Add(board[1, y]);
                 toDestroy.Add(board[2, y]);
+
+                Vector3 worldPos = new Vector3(0, (y - 1) * 3, 15);
+                StartCoroutine(ShowGoodEffect(worldPos));
             }
         }
+
+        
 
         for (int x = 0; x < 3; x++)
         {
@@ -224,6 +247,9 @@ public class GameManager : MonoBehaviour
                 toDestroy.Add(board[x, 0]);
                 toDestroy.Add(board[x, 1]);
                 toDestroy.Add(board[x, 2]);
+
+                Vector3 worldPos = new Vector3((x - 1) * 3, 0, 15);
+                StartCoroutine(ShowGoodEffect(worldPos));
             }
         }
 
@@ -273,6 +299,56 @@ public class GameManager : MonoBehaviour
                 Destroy(obj);
             }
         }
+    }
+
+    IEnumerator ShowGoodEffect(Vector3 worldPosition)
+    {
+        // 랜덤으로 good 이미지 선택
+        int randomIndex = Random.Range(0, goodEffectPrefabs.Length);
+        GameObject selectedPrefab = goodEffectPrefabs[randomIndex];
+
+        // 월드 좌표를 스크린 좌표로 변환
+        Vector3 screenPos = Camera.main.WorldToScreenPoint(worldPosition);
+
+        // UI 캔버스에 good 효과 생성
+        GameObject goodEffect = Instantiate(selectedPrefab, uiCanvas.transform);
+        RectTransform rectTransform = goodEffect.GetComponent<RectTransform>();
+
+        // 스크린 좌표를 UI 좌표로 변환
+        Vector2 uiPos;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            uiCanvas.transform as RectTransform,
+            screenPos,
+            uiCanvas.worldCamera,
+            out uiPos
+        );
+
+        rectTransform.localPosition = uiPos;
+
+        float duration = 0.8f;
+        float elapsed = 0f;
+
+        Vector3 originalScale = rectTransform.localScale;
+        CanvasGroup canvasGroup = goodEffect.GetComponent<CanvasGroup>();
+        if (canvasGroup == null)
+            canvasGroup = goodEffect.AddComponent<CanvasGroup>();
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / duration;
+
+            // 크기 효과
+            float scale = Mathf.Lerp(1.2f, 0f, t);
+            rectTransform.localScale = originalScale * scale;
+
+            // 투명도 조절
+            canvasGroup.alpha = Mathf.Lerp(1f, 0f, t);
+
+            yield return null;
+        }
+
+        Destroy(goodEffect);
     }
 
     IEnumerator RefillBoardAnimated()
