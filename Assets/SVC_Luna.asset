@@ -29,222 +29,6 @@ MonoBehaviour:
     upToDate: 0
     keywords: []
   - shaderCompilerPlatform: 5
-    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords: []
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords: []
-  - shaderCompilerPlatform: 5
-    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - UNITY_UI_ALPHACLIP
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - UNITY_UI_ALPHACLIP
-  - shaderCompilerPlatform: 5
-    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - UNITY_UI_CLIP_RECT
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - UNITY_UI_CLIP_RECT
-  - shaderCompilerPlatform: 5
-    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - UNITY_UI_ALPHACLIP
-    - UNITY_UI_CLIP_RECT
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - UNITY_UI_ALPHACLIP
-    - UNITY_UI_CLIP_RECT
-  - shaderCompilerPlatform: 5
-    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - OUTLINE_ON
-    - UNDERLAY_ON
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - OUTLINE_ON
-    - UNDERLAY_ON
-  - shaderCompilerPlatform: 5
-    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - UNITY_UI_ALPHACLIP
-    - OUTLINE_ON
-    - UNDERLAY_ON
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - UNITY_UI_ALPHACLIP
-    - OUTLINE_ON
-    - UNDERLAY_ON
-  - shaderCompilerPlatform: 5
-    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - UNITY_UI_CLIP_RECT
-    - OUTLINE_ON
-    - UNDERLAY_ON
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - UNITY_UI_CLIP_RECT
-    - OUTLINE_ON
-    - UNDERLAY_ON
-  - shaderCompilerPlatform: 5
-    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - UNITY_UI_ALPHACLIP
-    - UNITY_UI_CLIP_RECT
-    - OUTLINE_ON
-    - UNDERLAY_ON
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - UNITY_UI_ALPHACLIP
-    - UNITY_UI_CLIP_RECT
-    - OUTLINE_ON
-    - UNDERLAY_ON
-  - shaderCompilerPlatform: 5
-    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - OUTLINE_ON
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - OUTLINE_ON
-  - shaderCompilerPlatform: 5
-    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - UNITY_UI_ALPHACLIP
-    - OUTLINE_ON
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - UNITY_UI_ALPHACLIP
-    - OUTLINE_ON
-  - shaderCompilerPlatform: 5
-    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - UNITY_UI_CLIP_RECT
-    - OUTLINE_ON
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - UNITY_UI_CLIP_RECT
-    - OUTLINE_ON
-  - shaderCompilerPlatform: 5
-    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - UNITY_UI_ALPHACLIP
-    - UNITY_UI_CLIP_RECT
-    - OUTLINE_ON
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - UNITY_UI_ALPHACLIP
-    - UNITY_UI_CLIP_RECT
-    - OUTLINE_ON
-  - shaderCompilerPlatform: 5
     shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
     passType: 13
     passId: 0
@@ -536,6 +320,222 @@ MonoBehaviour:
     subShaderIndex: 0
     upToDate: 0
     keywords: []
+  - shaderCompilerPlatform: 5
+    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords: []
+  - shaderCompilerPlatform: 9
+    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords: []
+  - shaderCompilerPlatform: 5
+    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords:
+    - UNITY_UI_ALPHACLIP
+  - shaderCompilerPlatform: 9
+    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords:
+    - UNITY_UI_ALPHACLIP
+  - shaderCompilerPlatform: 5
+    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords:
+    - UNITY_UI_CLIP_RECT
+  - shaderCompilerPlatform: 9
+    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords:
+    - UNITY_UI_CLIP_RECT
+  - shaderCompilerPlatform: 5
+    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords:
+    - UNITY_UI_ALPHACLIP
+    - UNITY_UI_CLIP_RECT
+  - shaderCompilerPlatform: 9
+    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords:
+    - UNITY_UI_ALPHACLIP
+    - UNITY_UI_CLIP_RECT
+  - shaderCompilerPlatform: 5
+    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords:
+    - OUTLINE_ON
+    - UNDERLAY_ON
+  - shaderCompilerPlatform: 9
+    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords:
+    - OUTLINE_ON
+    - UNDERLAY_ON
+  - shaderCompilerPlatform: 5
+    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords:
+    - UNITY_UI_ALPHACLIP
+    - OUTLINE_ON
+    - UNDERLAY_ON
+  - shaderCompilerPlatform: 9
+    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords:
+    - UNITY_UI_ALPHACLIP
+    - OUTLINE_ON
+    - UNDERLAY_ON
+  - shaderCompilerPlatform: 5
+    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords:
+    - UNITY_UI_CLIP_RECT
+    - OUTLINE_ON
+    - UNDERLAY_ON
+  - shaderCompilerPlatform: 9
+    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords:
+    - UNITY_UI_CLIP_RECT
+    - OUTLINE_ON
+    - UNDERLAY_ON
+  - shaderCompilerPlatform: 5
+    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords:
+    - UNITY_UI_ALPHACLIP
+    - UNITY_UI_CLIP_RECT
+    - OUTLINE_ON
+    - UNDERLAY_ON
+  - shaderCompilerPlatform: 9
+    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords:
+    - UNITY_UI_ALPHACLIP
+    - UNITY_UI_CLIP_RECT
+    - OUTLINE_ON
+    - UNDERLAY_ON
+  - shaderCompilerPlatform: 5
+    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords:
+    - OUTLINE_ON
+  - shaderCompilerPlatform: 9
+    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords:
+    - OUTLINE_ON
+  - shaderCompilerPlatform: 5
+    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords:
+    - UNITY_UI_ALPHACLIP
+    - OUTLINE_ON
+  - shaderCompilerPlatform: 9
+    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords:
+    - UNITY_UI_ALPHACLIP
+    - OUTLINE_ON
+  - shaderCompilerPlatform: 5
+    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords:
+    - UNITY_UI_CLIP_RECT
+    - OUTLINE_ON
+  - shaderCompilerPlatform: 9
+    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords:
+    - UNITY_UI_CLIP_RECT
+    - OUTLINE_ON
+  - shaderCompilerPlatform: 5
+    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords:
+    - UNITY_UI_ALPHACLIP
+    - UNITY_UI_CLIP_RECT
+    - OUTLINE_ON
+  - shaderCompilerPlatform: 9
+    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords:
+    - UNITY_UI_ALPHACLIP
+    - UNITY_UI_CLIP_RECT
+    - OUTLINE_ON
   - shaderCompilerPlatform: 5
     shader: {fileID: 106, guid: 0000000000000000f000000000000000, type: 0}
     passType: 0
@@ -813,7 +813,7 @@ MonoBehaviour:
     keywords: []
   _includedShaderVariants: []
   _excludedShaderVariants: []
-  version: 137
+  version: 179
   _shaderParsedShaders:
   - ParsedSubShaders:
     - Index: 0
@@ -16644,11 +16644,11 @@ MonoBehaviour:
       upToDate: 0
       keywords: []
   _modifiedShaders: []
-  invalidShaders: 1
+  invalidShaders: 0
   _sceneLightData:
     PointLightCount: 0
     SpotLightCount: 0
-    DirectionalLightCount: 4
+    DirectionalLightCount: 2
     LightmapOn: 1
     DirlightmapCombined: 1
     DirectionalCookieExists: 0
