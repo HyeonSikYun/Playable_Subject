@@ -3,15 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 public class GameManager : MonoBehaviour
 {
-    public GameObject[] itemPrefabs; // 3개의 아이템 프리팹
-    public Transform gridParent;     // 아이템을 배치할 부모
-    public GameObject[] goodEffectPrefabs; // good 이미지 프리팹
-    public Canvas uiCanvas; // UI 캔버스 참조
-    public float swapDuration = 0.3f;    // 스왑 애니메이션 시간
-    public float destroyDuration = 0.5f; // 삭제 애니메이션 시간
-    public float refillDuration = 0.4f;  // 리필 애니메이션 시간
-    public float shuffleDuration = 0.8f; // 셔플 애니메이션 시간
-    private bool isAnimating = false;    // 애니메이션 중 입력 방지
+    public GameObject[] itemPrefabs; 
+    public Transform gridParent;   
+    public GameObject[] goodEffectPrefabs; 
+    public Canvas uiCanvas; 
+    public float swapDuration = 0.3f;   
+    public float destroyDuration = 0.5f; 
+    public float refillDuration = 0.4f;  
+    public float shuffleDuration = 0.8f; 
+    private bool isAnimating = false; 
     private GameObject[,] board = new GameObject[3, 3];
     private ItemCell firstSelected = null;
     void Start()
@@ -24,7 +24,6 @@ public class GameManager : MonoBehaviour
         {
             for (int x = 0; x < 3; x++)
             {
-                // 위치 계산 수정: x,y는 -3, 0, 3으로, z는 15로 고정
                 Vector3 pos = new Vector3((x - 1) * 3, (y - 1) * 3, 15);
                 int itemId = GetSafeItemId(x, y);
                 GameObject go = Instantiate(itemPrefabs[itemId], pos, Quaternion.identity, gridParent);
@@ -39,13 +38,10 @@ public class GameManager : MonoBehaviour
 
     IEnumerator CheckInitialBoard()
     {
-        // 한 프레임 대기 (모든 아이템 초기화 완료 대기)
         yield return null;
 
-        // 가능한 움직임이 없으면 셔플
         if (!HasPossibleMoves())
         {
-            Debug.Log("🔄 초기 보드에 가능한 움직임이 없습니다! 자동 셔플 중...");
             yield return StartCoroutine(ShowShuffleMessage());
             yield return StartCoroutine(ShuffleBoard());
         }
@@ -127,7 +123,6 @@ public class GameManager : MonoBehaviour
         // 매치 검사
         if (CheckMatches())
         {
-            Debug.Log("🎉 매치 성공!");
             // 매치된 아이템들 삭제 애니메이션
             yield return StartCoroutine(DestroyMatchedItems());
             // 리필 애니메이션
@@ -142,7 +137,6 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("❌ 매치 실패 - 되돌리기");
             // 매치가 안되면 다시 되돌리기
             yield return StartCoroutine(SwapItemsAnimated(a, b));
         }
@@ -419,7 +413,6 @@ public class GameManager : MonoBehaviour
         // 리필 후 연속 매치 확인
         if (CheckMatches())
         {
-            Debug.Log("🎉 연속 매치!");
             yield return StartCoroutine(DestroyMatchedItems());
             yield return StartCoroutine(RefillBoardAnimated());
         }
@@ -497,17 +490,11 @@ public class GameManager : MonoBehaviour
 
     IEnumerator ShowShuffleMessage()
     {
-        Debug.Log("🔄 가능한 움직임이 없습니다! 자동 셔플 중...");
-
-        // UI 메시지 표시 (Canvas나 UI Text가 있다면)
-        // 여기서는 콘솔 메시지로 대체
         yield return new WaitForSeconds(1.5f);
     }
 
     IEnumerator ShuffleBoard()
     {
-        Debug.Log("🎲 셔플 시작!");
-
         // 현재 아이템들의 ID 수집
         List<int> itemIds = new List<int>();
         List<GameObject> items = new List<GameObject>();
@@ -621,13 +608,9 @@ public class GameManager : MonoBehaviour
                 items[i].transform.rotation = Quaternion.identity;
             }
         }
-
-        Debug.Log("✅ 셔플 완료!");
-
         // 안전장치: 셔플 후에도 움직임이 없다면 강제로 보장된 배치 생성
         if (!HasPossibleMoves())
         {
-            Debug.Log("⚠️ 셔플 후에도 움직임이 없습니다. 보장된 배치 생성...");
             yield return StartCoroutine(CreateGuaranteedMoveBoard());
         }
     }
@@ -756,10 +739,6 @@ public class GameManager : MonoBehaviour
 
     int[,] GetGuaranteedMoveBoard()
     {
-        // 확실히 움직임이 보장되는 패턴 생성
-        // 예: 0 1 2
-        //     1 2 0  <- 이 패턴은 항상 움직임 가능
-        //     2 0 1
 
         int[,] guaranteedBoard = new int[3, 3];
 
@@ -807,7 +786,6 @@ public class GameManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(0.5f);
-        Debug.Log("🔧 보장된 배치로 강제 생성 완료!");
     }
     int GetItemId(int x, int y)
     {

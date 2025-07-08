@@ -25,14 +25,7 @@ public class TimerSlider : MonoBehaviour
             if (timeLeft <= 0)
             {
                 timeLeft = 0;
-                OnTimeOver();
             }
         }
-    }
-
-    void OnTimeOver()
-    {
-        Debug.Log("🕒 시간 종료! 게임 오버 처리");
-        // 여기에 게임 오버 로직 연결
     }
 }
