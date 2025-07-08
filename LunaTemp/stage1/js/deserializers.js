@@ -2720,7 +2720,7 @@ Deserializers.unityVersion = "2022.3.60f1";
 
 Deserializers.productName = "Playable_Project";
 
-Deserializers.lunaInitializationTime = "07/07/2025 19:41:10";
+Deserializers.lunaInitializationTime = "";
 
 Deserializers.lunaDaysRunning = "0.5";
 
@@ -2778,7 +2778,7 @@ Deserializers.graphicsConstraint = 28;
 
 Deserializers.linearColorSpace = true;
 
-Deserializers.buildID = "6d537ecc-fee2-4eb8-b963-9be8a46d358b";
+Deserializers.buildID = "7270e27b-d532-4439-a473-c7af8fa52086";
 
 Deserializers.runtimeInitializeOnLoadInfos = [[["UnityEngine","Rendering","DebugUpdater","RuntimeInit"],["UnityEngine","Experimental","Rendering","ScriptableRuntimeReflectionSystemSettings","ScriptingDirtyReflectionSystemInstance"]],[["Unity","VisualScripting","RuntimeVSUsageUtility","RuntimeInitializeOnLoadBeforeSceneLoad"]],[],[["UnityEngine","Experimental","Rendering","XRSystem","XRSystemInit"]],[]];
 
