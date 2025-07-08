@@ -1,12 +1,12 @@
 {
-  "BuildID": "fc19cd45-f83e-4026-9836-894472a1598c",
-  "Command": "project:build",
+  "BuildID": "9f0b7f78-48d3-40fe-abe0-650fb267507e",
+  "Command": "project:recompile",
   "ProjectID": "1ea3bb43f778449c78ecaf64beaf075a",
-  "ProjectStateHash": "a88d1856b94a7c58c111ba7b10303e63a10b3a696ff60e06a80849aa6b80717a",
+  "ProjectStateHash": "6755faa3e6b13b6c5c2885d15b218f591845151749256eabd42dae31a8cb3f25",
   "StageCompletedAt": 3,
   "EarliestFatalError": 0,
-  "StartTime": 1751966615022,
-  "EndTime": 1751966633139,
+  "StartTime": 1751968160207,
+  "EndTime": 1751968180081,
   "PlaygroundUserID": 25441,
   "OperatingSystem": "win32",
   "UnityPackageID": null,
@@ -16,9 +16,9 @@
   "LogCount": 11,
   "Logs": [
     {
-      "LogID": "54c84c83-00e6-4e4e-b28c-591da38f94cd",
+      "LogID": "340cf931-81e7-406a-876c-bbd4ed45a326",
       "Order": 8,
-      "Timestamp": 1751966633311,
+      "Timestamp": 1751968180255,
       "Stage": 3,
       "ErrorType": 1,
       "ErrorCode": "LP3006",
@@ -42,9 +42,9 @@
       "Severity": 0
     },
     {
-      "LogID": "7c809a39-1728-4561-a88b-73e8f3d02027",
+      "LogID": "a7d6568c-e3dd-4fe8-b821-9133d7dd430d",
       "Order": 8,
-      "Timestamp": 1751966633312,
+      "Timestamp": 1751968180255,
       "Stage": 3,
       "ErrorType": 1,
       "ErrorCode": "LP3015",
@@ -68,9 +68,9 @@
       "Severity": 0
     },
     {
-      "LogID": "b463437b-2822-4e9e-800d-050f20e90e6e",
+      "LogID": "c41f48cc-c495-4a02-b49c-5fec773109cd",
       "Order": 8,
-      "Timestamp": 1751966633312,
+      "Timestamp": 1751968180257,
       "Stage": 3,
       "ErrorType": 3,
       "ErrorCode": "LP3007",
@@ -92,9 +92,9 @@
       "Severity": 0
     },
     {
-      "LogID": "f6869ff2-3299-4323-b1ba-c48e9586c18c",
+      "LogID": "fc89da57-961d-4760-ab54-710d16292a6f",
       "Order": 8,
-      "Timestamp": 1751966633313,
+      "Timestamp": 1751968180257,
       "Stage": 3,
       "ErrorType": 3,
       "ErrorCode": "LP3011",
