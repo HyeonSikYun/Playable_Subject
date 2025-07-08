@@ -19605,11 +19605,11 @@
                     },
                     {
                         "name": "sizeDelta#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "sizeDelta#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "rect#get",
@@ -25191,11 +25191,11 @@
                     },
                     {
                         "name": "fontSize#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "fontSize#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "fontWeight#get",
@@ -31177,6 +31177,28 @@
                 "instanceMethods": [
                     {
                         "name": "init",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "UIScaler",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Start",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Update",
+                        "excluded": false
+                    },
+                    {
+                        "name": "UpdateUIScale",
                         "excluded": false
                     }
                 ]

@@ -3292,6 +3292,72 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
     });
     /*TimerSlider end.*/
 
+    /*UIScaler start.*/
+    Bridge.define("UIScaler", {
+        inherits: [UnityEngine.MonoBehaviour],
+        fields: {
+            topImage: null,
+            middleImage: null,
+            bottomButton: null,
+            tmpText: null,
+            aspectThreshold: 0,
+            topOriginalSize: null,
+            middleOriginalSize: null,
+            buttonOriginalSize: null,
+            originalFontSize: 0,
+            currentAspect: 0
+        },
+        ctors: {
+            init: function () {
+                this.topOriginalSize = new UnityEngine.Vector2();
+                this.middleOriginalSize = new UnityEngine.Vector2();
+                this.buttonOriginalSize = new UnityEngine.Vector2();
+                this.aspectThreshold = 0.7;
+                this.originalFontSize = 0.0;
+                this.currentAspect = 0.0;
+            }
+        },
+        methods: {
+            /*UIScaler.Start start.*/
+            Start: function () {
+                this.topOriginalSize = this.topImage.sizeDelta.$clone();
+                this.middleOriginalSize = this.middleImage.sizeDelta.$clone();
+                this.buttonOriginalSize = this.bottomButton.sizeDelta.$clone();
+                this.tmpText = this.bottomButton.GetComponentInChildren(TMPro.TextMeshProUGUI);
+                if (UnityEngine.MonoBehaviour.op_Inequality(this.tmpText, null)) {
+                    this.originalFontSize = this.tmpText.fontSize;
+                }
+                this.UpdateUIScale();
+            },
+            /*UIScaler.Start end.*/
+
+            /*UIScaler.Update start.*/
+            Update: function () {
+                var newAspect = UnityEngine.Screen.width / UnityEngine.Screen.height;
+                if (Math.abs(newAspect - this.currentAspect) > 0.01) {
+                    this.UpdateUIScale();
+                }
+            },
+            /*UIScaler.Update end.*/
+
+            /*UIScaler.UpdateUIScale start.*/
+            UpdateUIScale: function () {
+                this.currentAspect = UnityEngine.Screen.width / UnityEngine.Screen.height;
+                var scale = ((this.currentAspect > this.aspectThreshold) ? 0.5 : 1.0);
+                this.topImage.sizeDelta = this.topOriginalSize.$clone().scale( scale );
+                this.middleImage.sizeDelta = this.middleOriginalSize.$clone().scale( scale );
+                this.bottomButton.sizeDelta = this.buttonOriginalSize.$clone().scale( scale );
+                if (UnityEngine.MonoBehaviour.op_Inequality(this.tmpText, null)) {
+                    this.tmpText.fontSize = this.originalFontSize * scale;
+                }
+            },
+            /*UIScaler.UpdateUIScale end.*/
+
+
+        }
+    });
+    /*UIScaler end.*/
+
     /*UnityEngine.UI.Extensions.CasualGame.UIParticleSystem start.*/
     Bridge.define("UnityEngine.UI.Extensions.CasualGame.UIParticleSystem", {
         inherits: [UnityEngine.UI.MaskableGraphic],
@@ -3615,6 +3681,10 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
     /*TimerSlider start.*/
     $m("TimerSlider", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"Start","t":8,"sn":"Start","rt":$n[1].Void},{"a":1,"n":"Update","t":8,"sn":"Update","rt":$n[1].Void},{"a":1,"n":"isFinished","t":4,"rt":$n[1].Boolean,"sn":"isFinished","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":2,"n":"resultPanel","t":4,"rt":$n[0].GameObject,"sn":"resultPanel"},{"a":1,"n":"timeLeft","t":4,"rt":$n[1].Single,"sn":"timeLeft","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":2,"n":"timerSlider","t":4,"rt":$n[5].Slider,"sn":"timerSlider"},{"a":2,"n":"totalTime","t":4,"rt":$n[1].Single,"sn":"totalTime","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}}]}; }, $n);
     /*TimerSlider end.*/
+
+    /*UIScaler start.*/
+    $m("UIScaler", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"Start","t":8,"sn":"Start","rt":$n[1].Void},{"a":1,"n":"Update","t":8,"sn":"Update","rt":$n[1].Void},{"a":1,"n":"UpdateUIScale","t":8,"sn":"UpdateUIScale","rt":$n[1].Void},{"a":2,"n":"aspectThreshold","t":4,"rt":$n[1].Single,"sn":"aspectThreshold","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":2,"n":"bottomButton","t":4,"rt":$n[0].RectTransform,"sn":"bottomButton"},{"a":1,"n":"buttonOriginalSize","t":4,"rt":$n[0].Vector2,"sn":"buttonOriginalSize"},{"a":1,"n":"currentAspect","t":4,"rt":$n[1].Single,"sn":"currentAspect","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":2,"n":"middleImage","t":4,"rt":$n[0].RectTransform,"sn":"middleImage"},{"a":1,"n":"middleOriginalSize","t":4,"rt":$n[0].Vector2,"sn":"middleOriginalSize"},{"a":1,"n":"originalFontSize","t":4,"rt":$n[1].Single,"sn":"originalFontSize","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":1,"n":"tmpText","t":4,"rt":$n[4].TextMeshProUGUI,"sn":"tmpText"},{"a":2,"n":"topImage","t":4,"rt":$n[0].RectTransform,"sn":"topImage"},{"a":1,"n":"topOriginalSize","t":4,"rt":$n[0].Vector2,"sn":"topOriginalSize"}]}; }, $n);
+    /*UIScaler end.*/
 
     /*UnityEngine.UI.Extensions.CasualGame.UIParticleSystem start.*/
     $m("UnityEngine.UI.Extensions.CasualGame.UIParticleSystem", function () { return {"att":1048577,"a":2,"at":[new UnityEngine.ExecuteInEditModeAttribute(),new UnityEngine.RequireComponent.$ctor1(UnityEngine.CanvasRenderer, UnityEngine.ParticleSystem),new UnityEngine.AddComponentMenu.ctor("UI/Effects/Extensions/UIParticleSystem")],"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"ov":true,"a":3,"n":"Awake","t":8,"sn":"Awake","rt":$n[1].Void},{"a":3,"n":"Initialize","t":8,"sn":"Initialize","rt":$n[1].Boolean,"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"LateUpdate","t":8,"sn":"LateUpdate","rt":$n[1].Void},{"ov":true,"a":3,"n":"OnDestroy","t":8,"sn":"OnDestroy","rt":$n[1].Void},{"ov":true,"a":3,"n":"OnPopulateMesh","t":8,"pi":[{"n":"vh","pt":$n[5].VertexHelper,"ps":0}],"sn":"OnPopulateMesh","rt":$n[1].Void,"p":[$n[5].VertexHelper]},{"a":2,"n":"PauseParticleEmission","t":8,"sn":"PauseParticleEmission","rt":$n[1].Void},{"a":2,"n":"StartParticleEmission","t":8,"sn":"StartParticleEmission","rt":$n[1].Void},{"a":2,"n":"StopParticleEmission","t":8,"sn":"StopParticleEmission","rt":$n[1].Void},{"a":1,"n":"Update","t":8,"sn":"Update","rt":$n[1].Void},{"ov":true,"a":2,"n":"mainTexture","t":16,"rt":$n[0].Texture,"g":{"ov":true,"a":2,"n":"get_mainTexture","t":8,"rt":$n[0].Texture,"fg":"mainTexture"},"fn":"mainTexture"},{"a":1,"n":"DefaultShaderPath","is":true,"t":4,"rt":$n[1].String,"sn":"DefaultShaderPath"},{"a":1,"n":"MainTex","is":true,"t":4,"rt":$n[1].Int32,"sn":"MainTex","ro":true,"box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"_currentMaterial","t":4,"rt":$n[0].Material,"sn":"_currentMaterial"},{"a":1,"n":"_currentTexture","t":4,"rt":$n[0].Texture,"sn":"_currentTexture"},{"a":1,"n":"_imageUV","t":4,"rt":$n[0].Vector4,"sn":"_imageUV"},{"a":1,"n":"_isInitialised","t":4,"rt":$n[1].Boolean,"sn":"_isInitialised","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"_mainModule","t":4,"rt":pc.ParticleSystemMain,"sn":"_mainModule"},{"a":1,"n":"_pRenderer","t":4,"rt":$n[0].ParticleSystemRenderer,"sn":"_pRenderer"},{"a":1,"n":"_pSystem","t":4,"rt":$n[0].ParticleSystem,"sn":"_pSystem"},{"a":1,"n":"_particles","t":4,"rt":System.Array.type(UnityEngine.ParticleSystem.Particle),"sn":"_particles"},{"a":1,"n":"_quad","t":4,"rt":System.Array.type(UnityEngine.UIVertex),"sn":"_quad","ro":true},{"a":1,"n":"_textureSheetAnimation","t":4,"rt":pc.ParticleSystemTextureSheetAnimation,"sn":"_textureSheetAnimation"},{"a":1,"n":"_textureSheetAnimationFrameSize","t":4,"rt":$n[0].Vector2,"sn":"_textureSheetAnimationFrameSize"},{"a":1,"n":"_textureSheetAnimationFrames","t":4,"rt":$n[1].Int32,"sn":"_textureSheetAnimationFrames","box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"_transform","t":4,"rt":$n[0].Transform,"sn":"_transform"},{"at":[new UnityEngine.TooltipAttribute("Having this enabled run the system in LateUpdate rather than in Update making it faster but less precise (more clunky)")],"a":2,"n":"fixedTime","t":4,"rt":$n[1].Boolean,"sn":"fixedTime","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.TooltipAttribute("Enables 3d rotation for the particles")],"a":2,"n":"use3dRotation","t":4,"rt":$n[1].Boolean,"sn":"use3dRotation","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}}]}; }, $n);
