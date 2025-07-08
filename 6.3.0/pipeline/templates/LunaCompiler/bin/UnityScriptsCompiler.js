@@ -1646,8 +1646,7 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
                                         continue;
                                 }
                                 case 2: {
-                                    UnityEngine.Debug.Log$1("\ud83d\udd04 \ucd08\uae30 \ubcf4\ub4dc\uc5d0 \uac00\ub2a5\ud55c \uc6c0\uc9c1\uc784\uc774 \uc5c6\uc2b5\ub2c8\ub2e4! \uc790\ub3d9 \uc154\ud50c \uc911...");
-                                        $enumerator.current = this.StartCoroutine$1(this.ShowShuffleMessage());
+                                    $enumerator.current = this.StartCoroutine$1(this.ShowShuffleMessage());
                                         $step = 3;
                                         return true;
                                 }
@@ -1758,8 +1757,7 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
                                         }
                                 }
                                 case 2: {
-                                    UnityEngine.Debug.Log$1("\ud83c\udf89 \ub9e4\uce58 \uc131\uacf5!");
-                                        $enumerator.current = this.StartCoroutine$1(this.DestroyMatchedItems());
+                                    $enumerator.current = this.StartCoroutine$1(this.DestroyMatchedItems());
                                         $step = 3;
                                         return true;
                                 }
@@ -1795,8 +1793,7 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
                                     continue;
                                 }
                                 case 9: {
-                                    UnityEngine.Debug.Log$1("\u274c \ub9e4\uce58 \uc2e4\ud328 - \ub418\ub3cc\ub9ac\uae30");
-                                        $enumerator.current = this.StartCoroutine$1(this.SwapItemsAnimated(a, b));
+                                    $enumerator.current = this.StartCoroutine$1(this.SwapItemsAnimated(a, b));
                                         $step = 10;
                                         return true;
                                 }
@@ -2212,8 +2209,7 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
                                         continue;
                                 }
                                 case 5: {
-                                    UnityEngine.Debug.Log$1("\ud83c\udf89 \uc5f0\uc18d \ub9e4\uce58!");
-                                        $enumerator.current = this.StartCoroutine$1(this.DestroyMatchedItems());
+                                    $enumerator.current = this.StartCoroutine$1(this.DestroyMatchedItems());
                                         $step = 6;
                                         return true;
                                 }
@@ -2319,8 +2315,7 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
                         for (;;) {
                             switch ($step) {
                                 case 0: {
-                                    UnityEngine.Debug.Log$1("\ud83d\udd04 \uac00\ub2a5\ud55c \uc6c0\uc9c1\uc784\uc774 \uc5c6\uc2b5\ub2c8\ub2e4! \uc790\ub3d9 \uc154\ud50c \uc911...");
-                                        $enumerator.current = new UnityEngine.WaitForSeconds(1.5);
+                                    $enumerator.current = new UnityEngine.WaitForSeconds(1.5);
                                         $step = 1;
                                         return true;
                                 }
@@ -2366,8 +2361,7 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
                         for (;;) {
                             switch ($step) {
                                 case 0: {
-                                    UnityEngine.Debug.Log$1("\ud83c\udfb2 \uc154\ud50c \uc2dc\uc791!");
-                                        itemIds = new (System.Collections.Generic.List$1(System.Int32)).ctor();
+                                    itemIds = new (System.Collections.Generic.List$1(System.Int32)).ctor();
                                         items = new (System.Collections.Generic.List$1(UnityEngine.GameObject)).ctor();
                                         for (var y2 = 0; y2 < 3; y2 = (y2 + 1) | 0) {
                                             for (var x = 0; x < 3; x = (x + 1) | 0) {
@@ -2472,7 +2466,6 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
                                                 items.getItem(k).transform.rotation = pc.Quat.IDENTITY.clone();
                                             }
                                         }
-                                        UnityEngine.Debug.Log$1("\u2705 \uc154\ud50c \uc644\ub8cc!");
                                         if (!this.HasPossibleMoves()) {
                                             $step = 9;
                                             continue;
@@ -2481,8 +2474,7 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
                                         continue;
                                 }
                                 case 9: {
-                                    UnityEngine.Debug.Log$1("\u26a0\ufe0f \uc154\ud50c \ud6c4\uc5d0\ub3c4 \uc6c0\uc9c1\uc784\uc774 \uc5c6\uc2b5\ub2c8\ub2e4. \ubcf4\uc7a5\ub41c \ubc30\uce58 \uc0dd\uc131...");
-                                        $enumerator.current = this.StartCoroutine$1(this.CreateGuaranteedMoveBoard());
+                                    $enumerator.current = this.StartCoroutine$1(this.CreateGuaranteedMoveBoard());
                                         $step = 10;
                                         return true;
                                 }
@@ -2643,7 +2635,6 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
                                         return true;
                                 }
                                 case 1: {
-                                    UnityEngine.Debug.Log$1("\ud83d\udd27 \ubcf4\uc7a5\ub41c \ubc30\uce58\ub85c \uac15\uc81c \uc0dd\uc131 \uc644\ub8cc!");
 
                                 }
                                 default: {
@@ -2781,17 +2772,10 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
                     this.timerSlider.value = this.timeLeft;
                     if (this.timeLeft <= 0.0) {
                         this.timeLeft = 0.0;
-                        this.OnTimeOver();
                     }
                 }
             },
             /*TimerSlider.Update end.*/
-
-            /*TimerSlider.OnTimeOver start.*/
-            OnTimeOver: function () {
-                UnityEngine.Debug.Log$1("\ud83d\udd52 \uc2dc\uac04 \uc885\ub8cc! \uac8c\uc784 \uc624\ubc84 \ucc98\ub9ac");
-            },
-            /*TimerSlider.OnTimeOver end.*/
 
 
         }
@@ -3103,7 +3087,7 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
     /*TextHint end.*/
 
     /*TimerSlider start.*/
-    $m("TimerSlider", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"OnTimeOver","t":8,"sn":"OnTimeOver","rt":$n[1].Void},{"a":1,"n":"Start","t":8,"sn":"Start","rt":$n[1].Void},{"a":1,"n":"Update","t":8,"sn":"Update","rt":$n[1].Void},{"a":1,"n":"timeLeft","t":4,"rt":$n[1].Single,"sn":"timeLeft","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":2,"n":"timerSlider","t":4,"rt":$n[4].Slider,"sn":"timerSlider"},{"a":2,"n":"totalTime","t":4,"rt":$n[1].Single,"sn":"totalTime","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}}]}; }, $n);
+    $m("TimerSlider", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"Start","t":8,"sn":"Start","rt":$n[1].Void},{"a":1,"n":"Update","t":8,"sn":"Update","rt":$n[1].Void},{"a":1,"n":"timeLeft","t":4,"rt":$n[1].Single,"sn":"timeLeft","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":2,"n":"timerSlider","t":4,"rt":$n[4].Slider,"sn":"timerSlider"},{"a":2,"n":"totalTime","t":4,"rt":$n[1].Single,"sn":"totalTime","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}}]}; }, $n);
     /*TimerSlider end.*/
 
     /*UnityEngine.UI.Extensions.CasualGame.UIParticleSystem start.*/

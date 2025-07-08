@@ -1,4 +1,4 @@
-if ( TRACE ) { TRACE( JSON.parse( '["DG.Tweening.DOTweenCYInstruction.WaitForCompletion#keepWaiting#get","DG.Tweening.DOTweenCYInstruction.WaitForCompletion#ctor","DG.Tweening.DOTweenCYInstruction.WaitForElapsedLoops#keepWaiting#get","DG.Tweening.DOTweenCYInstruction.WaitForElapsedLoops#ctor","DG.Tweening.DOTweenCYInstruction.WaitForKill#keepWaiting#get","DG.Tweening.DOTweenCYInstruction.WaitForKill#ctor","DG.Tweening.DOTweenCYInstruction.WaitForPosition#keepWaiting#get","DG.Tweening.DOTweenCYInstruction.WaitForPosition#ctor","DG.Tweening.DOTweenCYInstruction.WaitForRewind#keepWaiting#get","DG.Tweening.DOTweenCYInstruction.WaitForRewind#ctor","DG.Tweening.DOTweenCYInstruction.WaitForStart#keepWaiting#get","DG.Tweening.DOTweenCYInstruction.WaitForStart#ctor","DG.Tweening.DOTweenModuleAudio#DOFade","DG.Tweening.DOTweenModuleAudio#DOPitch","DG.Tweening.DOTweenModuleAudio#DOSetFloat","DG.Tweening.DOTweenModuleAudio#DOComplete","DG.Tweening.DOTweenModuleAudio#DOKill","DG.Tweening.DOTweenModuleAudio#DOFlip","DG.Tweening.DOTweenModuleAudio#DOGoto","DG.Tweening.DOTweenModuleAudio#DOPause","DG.Tweening.DOTweenModuleAudio#DOPlay","DG.Tweening.DOTweenModuleAudio#DOPlayBackwards","DG.Tweening.DOTweenModuleAudio#DOPlayForward","DG.Tweening.DOTweenModuleAudio#DORestart","DG.Tweening.DOTweenModuleAudio#DORewind","DG.Tweening.DOTweenModuleAudio#DOSmoothRewind","DG.Tweening.DOTweenModuleAudio#DOTogglePause","DG.Tweening.DOTweenModulePhysics#DOMove","DG.Tweening.DOTweenModulePhysics#DOMoveX","DG.Tweening.DOTweenModulePhysics#DOMoveY","DG.Tweening.DOTweenModulePhysics#DOMoveZ","DG.Tweening.DOTweenModulePhysics#DORotate","DG.Tweening.DOTweenModulePhysics#DOLookAt","DG.Tweening.DOTweenModulePhysics#DOJump","DG.Tweening.DOTweenModulePhysics#DOPath","DG.Tweening.DOTweenModulePhysics#DOPath$1","DG.Tweening.DOTweenModulePhysics#DOLocalPath","DG.Tweening.DOTweenModulePhysics#DOLocalPath$1","DG.Tweening.DOTweenModulePhysics2D#DOMove","DG.Tweening.DOTweenModulePhysics2D#DOMoveX","DG.Tweening.DOTweenModulePhysics2D#DOMoveY","DG.Tweening.DOTweenModulePhysics2D#DORotate","DG.Tweening.DOTweenModulePhysics2D#DOJump","DG.Tweening.DOTweenModulePhysics2D#DOPath","DG.Tweening.DOTweenModulePhysics2D#DOPath$1","DG.Tweening.DOTweenModulePhysics2D#DOLocalPath","DG.Tweening.DOTweenModulePhysics2D#DOLocalPath$1","DG.Tweening.DOTweenModuleSprite#DOColor","DG.Tweening.DOTweenModuleSprite#DOFade","DG.Tweening.DOTweenModuleSprite#DOGradientColor","DG.Tweening.DOTweenModuleSprite#DOBlendableColor","DG.Tweening.DOTweenModuleUI#DOFade","DG.Tweening.DOTweenModuleUI#DOFade$1","DG.Tweening.DOTweenModuleUI#DOFade$2","DG.Tweening.DOTweenModuleUI#DOFade$3","DG.Tweening.DOTweenModuleUI#DOFade$4","DG.Tweening.DOTweenModuleUI#DOColor","DG.Tweening.DOTweenModuleUI#DOColor$1","DG.Tweening.DOTweenModuleUI#DOColor$2","DG.Tweening.DOTweenModuleUI#DOColor$3","DG.Tweening.DOTweenModuleUI#DOFillAmount","DG.Tweening.DOTweenModuleUI#DOGradientColor","DG.Tweening.DOTweenModuleUI#DOFlexibleSize","DG.Tweening.DOTweenModuleUI#DOMinSize","DG.Tweening.DOTweenModuleUI#DOPreferredSize","DG.Tweening.DOTweenModuleUI#DOScale","DG.Tweening.DOTweenModuleUI#DOAnchorPos","DG.Tweening.DOTweenModuleUI#DOAnchorPosX","DG.Tweening.DOTweenModuleUI#DOAnchorPosY","DG.Tweening.DOTweenModuleUI#DOAnchorPos3D","DG.Tweening.DOTweenModuleUI#DOAnchorPos3DX","DG.Tweening.DOTweenModuleUI#DOAnchorPos3DY","DG.Tweening.DOTweenModuleUI#DOAnchorPos3DZ","DG.Tweening.DOTweenModuleUI#DOAnchorMax","DG.Tweening.DOTweenModuleUI#DOAnchorMin","DG.Tweening.DOTweenModuleUI#DOPivot","DG.Tweening.DOTweenModuleUI#DOPivotX","DG.Tweening.DOTweenModuleUI#DOPivotY","DG.Tweening.DOTweenModuleUI#DOSizeDelta","DG.Tweening.DOTweenModuleUI#DOPunchAnchorPos","DG.Tweening.DOTweenModuleUI#DOShakeAnchorPos","DG.Tweening.DOTweenModuleUI#DOShakeAnchorPos$1","DG.Tweening.DOTweenModuleUI#DOJumpAnchorPos","DG.Tweening.DOTweenModuleUI#DONormalizedPos","DG.Tweening.DOTweenModuleUI#DOHorizontalNormalizedPos","DG.Tweening.DOTweenModuleUI#DOVerticalNormalizedPos","DG.Tweening.DOTweenModuleUI#DOValue","DG.Tweening.DOTweenModuleUI#DOCounter","DG.Tweening.DOTweenModuleUI#DOText","DG.Tweening.DOTweenModuleUI#DOBlendableColor","DG.Tweening.DOTweenModuleUI#DOBlendableColor$1","DG.Tweening.DOTweenModuleUI#DOBlendableColor$2","DG.Tweening.DOTweenModuleUI#DOShapeCircle","DG.Tweening.DOTweenModuleUI.Utils#SwitchToRectTransform","DG.Tweening.DOTweenModuleUnityVersion#DOGradientColor","DG.Tweening.DOTweenModuleUnityVersion#DOGradientColor$1","DG.Tweening.DOTweenModuleUnityVersion#WaitForCompletion","DG.Tweening.DOTweenModuleUnityVersion#WaitForRewind","DG.Tweening.DOTweenModuleUnityVersion#WaitForKill","DG.Tweening.DOTweenModuleUnityVersion#WaitForElapsedLoops","DG.Tweening.DOTweenModuleUnityVersion#WaitForPosition","DG.Tweening.DOTweenModuleUnityVersion#WaitForStart","DG.Tweening.DOTweenModuleUnityVersion#DOOffset","DG.Tweening.DOTweenModuleUnityVersion#DOTiling","DG.Tweening.DOTweenModuleUtils#Init","DG.Tweening.DOTweenModuleUtils#Preserver","DG.Tweening.DOTweenModuleUtils.Physics#SetOrientationOnPath","DG.Tweening.DOTweenModuleUtils.Physics#HasRigidbody2D","DG.Tweening.DOTweenModuleUtils.Physics#HasRigidbody","DG.Tweening.DOTweenModuleUtils.Physics#CreateDOTweenPathTween","GameManager#init","GameManager#Start","GameManager#GenerateBoard","GameManager#CheckInitialBoard","GameManager#GetSafeItemId","GameManager#GetItemIdSafe","GameManager#OnItemSelected","GameManager#IsAdjacent","GameManager#TrySwap","GameManager#SwapItemsAnimated","GameManager#SwapBoardData","GameManager#CheckMatches","GameManager#DestroyMatchedItems","GameManager#ShowGoodEffect","GameManager#RefillBoardAnimated","GameManager#HasPossibleMoves","GameManager#WouldCreateMatch","GameManager#ShowShuffleMessage","GameManager#ShuffleBoard","GameManager#GenerateShuffledBoard","GameManager#GetSafeShuffleItemId","GameManager#HasPossibleMovesOnBoard","GameManager#WouldCreateMatchOnBoard","GameManager#GetGuaranteedMoveBoard","GameManager#CreateGuaranteedMoveBoard","GameManager#GetItemId","ItemCell#Init","ItemCell#SetPosition","ItemCell#OnMouseDown","ItemCell#Highlight","TextHint#init","TextHint#Start","TextHint#AnimateLoop","TimerSlider#init","TimerSlider#Start","TimerSlider#Update","TimerSlider#OnTimeOver","UnityEngine.UI.Extensions.CasualGame.UIParticleSystem#init","UnityEngine.UI.Extensions.CasualGame.UIParticleSystem#mainTexture#get","UnityEngine.UI.Extensions.CasualGame.UIParticleSystem#init","UnityEngine.UI.Extensions.CasualGame.UIParticleSystem#Initialize","UnityEngine.UI.Extensions.CasualGame.UIParticleSystem#Awake","UnityEngine.UI.Extensions.CasualGame.UIParticleSystem#OnPopulateMesh","UnityEngine.UI.Extensions.CasualGame.UIParticleSystem#Update","UnityEngine.UI.Extensions.CasualGame.UIParticleSystem#LateUpdate","UnityEngine.UI.Extensions.CasualGame.UIParticleSystem#OnDestroy","UnityEngine.UI.Extensions.CasualGame.UIParticleSystem#StartParticleEmission","UnityEngine.UI.Extensions.CasualGame.UIParticleSystem#StopParticleEmission","UnityEngine.UI.Extensions.CasualGame.UIParticleSystem#PauseParticleEmission"]' ) ); }
+if ( TRACE ) { TRACE( JSON.parse( '["DG.Tweening.DOTweenCYInstruction.WaitForCompletion#keepWaiting#get","DG.Tweening.DOTweenCYInstruction.WaitForCompletion#ctor","DG.Tweening.DOTweenCYInstruction.WaitForElapsedLoops#keepWaiting#get","DG.Tweening.DOTweenCYInstruction.WaitForElapsedLoops#ctor","DG.Tweening.DOTweenCYInstruction.WaitForKill#keepWaiting#get","DG.Tweening.DOTweenCYInstruction.WaitForKill#ctor","DG.Tweening.DOTweenCYInstruction.WaitForPosition#keepWaiting#get","DG.Tweening.DOTweenCYInstruction.WaitForPosition#ctor","DG.Tweening.DOTweenCYInstruction.WaitForRewind#keepWaiting#get","DG.Tweening.DOTweenCYInstruction.WaitForRewind#ctor","DG.Tweening.DOTweenCYInstruction.WaitForStart#keepWaiting#get","DG.Tweening.DOTweenCYInstruction.WaitForStart#ctor","DG.Tweening.DOTweenModuleAudio#DOFade","DG.Tweening.DOTweenModuleAudio#DOPitch","DG.Tweening.DOTweenModuleAudio#DOSetFloat","DG.Tweening.DOTweenModuleAudio#DOComplete","DG.Tweening.DOTweenModuleAudio#DOKill","DG.Tweening.DOTweenModuleAudio#DOFlip","DG.Tweening.DOTweenModuleAudio#DOGoto","DG.Tweening.DOTweenModuleAudio#DOPause","DG.Tweening.DOTweenModuleAudio#DOPlay","DG.Tweening.DOTweenModuleAudio#DOPlayBackwards","DG.Tweening.DOTweenModuleAudio#DOPlayForward","DG.Tweening.DOTweenModuleAudio#DORestart","DG.Tweening.DOTweenModuleAudio#DORewind","DG.Tweening.DOTweenModuleAudio#DOSmoothRewind","DG.Tweening.DOTweenModuleAudio#DOTogglePause","DG.Tweening.DOTweenModulePhysics#DOMove","DG.Tweening.DOTweenModulePhysics#DOMoveX","DG.Tweening.DOTweenModulePhysics#DOMoveY","DG.Tweening.DOTweenModulePhysics#DOMoveZ","DG.Tweening.DOTweenModulePhysics#DORotate","DG.Tweening.DOTweenModulePhysics#DOLookAt","DG.Tweening.DOTweenModulePhysics#DOJump","DG.Tweening.DOTweenModulePhysics#DOPath","DG.Tweening.DOTweenModulePhysics#DOPath$1","DG.Tweening.DOTweenModulePhysics#DOLocalPath","DG.Tweening.DOTweenModulePhysics#DOLocalPath$1","DG.Tweening.DOTweenModulePhysics2D#DOMove","DG.Tweening.DOTweenModulePhysics2D#DOMoveX","DG.Tweening.DOTweenModulePhysics2D#DOMoveY","DG.Tweening.DOTweenModulePhysics2D#DORotate","DG.Tweening.DOTweenModulePhysics2D#DOJump","DG.Tweening.DOTweenModulePhysics2D#DOPath","DG.Tweening.DOTweenModulePhysics2D#DOPath$1","DG.Tweening.DOTweenModulePhysics2D#DOLocalPath","DG.Tweening.DOTweenModulePhysics2D#DOLocalPath$1","DG.Tweening.DOTweenModuleSprite#DOColor","DG.Tweening.DOTweenModuleSprite#DOFade","DG.Tweening.DOTweenModuleSprite#DOGradientColor","DG.Tweening.DOTweenModuleSprite#DOBlendableColor","DG.Tweening.DOTweenModuleUI#DOFade","DG.Tweening.DOTweenModuleUI#DOFade$1","DG.Tweening.DOTweenModuleUI#DOFade$2","DG.Tweening.DOTweenModuleUI#DOFade$3","DG.Tweening.DOTweenModuleUI#DOFade$4","DG.Tweening.DOTweenModuleUI#DOColor","DG.Tweening.DOTweenModuleUI#DOColor$1","DG.Tweening.DOTweenModuleUI#DOColor$2","DG.Tweening.DOTweenModuleUI#DOColor$3","DG.Tweening.DOTweenModuleUI#DOFillAmount","DG.Tweening.DOTweenModuleUI#DOGradientColor","DG.Tweening.DOTweenModuleUI#DOFlexibleSize","DG.Tweening.DOTweenModuleUI#DOMinSize","DG.Tweening.DOTweenModuleUI#DOPreferredSize","DG.Tweening.DOTweenModuleUI#DOScale","DG.Tweening.DOTweenModuleUI#DOAnchorPos","DG.Tweening.DOTweenModuleUI#DOAnchorPosX","DG.Tweening.DOTweenModuleUI#DOAnchorPosY","DG.Tweening.DOTweenModuleUI#DOAnchorPos3D","DG.Tweening.DOTweenModuleUI#DOAnchorPos3DX","DG.Tweening.DOTweenModuleUI#DOAnchorPos3DY","DG.Tweening.DOTweenModuleUI#DOAnchorPos3DZ","DG.Tweening.DOTweenModuleUI#DOAnchorMax","DG.Tweening.DOTweenModuleUI#DOAnchorMin","DG.Tweening.DOTweenModuleUI#DOPivot","DG.Tweening.DOTweenModuleUI#DOPivotX","DG.Tweening.DOTweenModuleUI#DOPivotY","DG.Tweening.DOTweenModuleUI#DOSizeDelta","DG.Tweening.DOTweenModuleUI#DOPunchAnchorPos","DG.Tweening.DOTweenModuleUI#DOShakeAnchorPos","DG.Tweening.DOTweenModuleUI#DOShakeAnchorPos$1","DG.Tweening.DOTweenModuleUI#DOJumpAnchorPos","DG.Tweening.DOTweenModuleUI#DONormalizedPos","DG.Tweening.DOTweenModuleUI#DOHorizontalNormalizedPos","DG.Tweening.DOTweenModuleUI#DOVerticalNormalizedPos","DG.Tweening.DOTweenModuleUI#DOValue","DG.Tweening.DOTweenModuleUI#DOCounter","DG.Tweening.DOTweenModuleUI#DOText","DG.Tweening.DOTweenModuleUI#DOBlendableColor","DG.Tweening.DOTweenModuleUI#DOBlendableColor$1","DG.Tweening.DOTweenModuleUI#DOBlendableColor$2","DG.Tweening.DOTweenModuleUI#DOShapeCircle","DG.Tweening.DOTweenModuleUI.Utils#SwitchToRectTransform","DG.Tweening.DOTweenModuleUnityVersion#DOGradientColor","DG.Tweening.DOTweenModuleUnityVersion#DOGradientColor$1","DG.Tweening.DOTweenModuleUnityVersion#WaitForCompletion","DG.Tweening.DOTweenModuleUnityVersion#WaitForRewind","DG.Tweening.DOTweenModuleUnityVersion#WaitForKill","DG.Tweening.DOTweenModuleUnityVersion#WaitForElapsedLoops","DG.Tweening.DOTweenModuleUnityVersion#WaitForPosition","DG.Tweening.DOTweenModuleUnityVersion#WaitForStart","DG.Tweening.DOTweenModuleUnityVersion#DOOffset","DG.Tweening.DOTweenModuleUnityVersion#DOTiling","DG.Tweening.DOTweenModuleUtils#Init","DG.Tweening.DOTweenModuleUtils#Preserver","DG.Tweening.DOTweenModuleUtils.Physics#SetOrientationOnPath","DG.Tweening.DOTweenModuleUtils.Physics#HasRigidbody2D","DG.Tweening.DOTweenModuleUtils.Physics#HasRigidbody","DG.Tweening.DOTweenModuleUtils.Physics#CreateDOTweenPathTween","GameManager#init","GameManager#Start","GameManager#GenerateBoard","GameManager#CheckInitialBoard","GameManager#GetSafeItemId","GameManager#GetItemIdSafe","GameManager#OnItemSelected","GameManager#IsAdjacent","GameManager#TrySwap","GameManager#SwapItemsAnimated","GameManager#SwapBoardData","GameManager#CheckMatches","GameManager#DestroyMatchedItems","GameManager#ShowGoodEffect","GameManager#RefillBoardAnimated","GameManager#HasPossibleMoves","GameManager#WouldCreateMatch","GameManager#ShowShuffleMessage","GameManager#ShuffleBoard","GameManager#GenerateShuffledBoard","GameManager#GetSafeShuffleItemId","GameManager#HasPossibleMovesOnBoard","GameManager#WouldCreateMatchOnBoard","GameManager#GetGuaranteedMoveBoard","GameManager#CreateGuaranteedMoveBoard","GameManager#GetItemId","ItemCell#Init","ItemCell#SetPosition","ItemCell#OnMouseDown","ItemCell#Highlight","TextHint#init","TextHint#Start","TextHint#AnimateLoop","TimerSlider#init","TimerSlider#Start","TimerSlider#Update","UnityEngine.UI.Extensions.CasualGame.UIParticleSystem#init","UnityEngine.UI.Extensions.CasualGame.UIParticleSystem#mainTexture#get","UnityEngine.UI.Extensions.CasualGame.UIParticleSystem#init","UnityEngine.UI.Extensions.CasualGame.UIParticleSystem#Initialize","UnityEngine.UI.Extensions.CasualGame.UIParticleSystem#Awake","UnityEngine.UI.Extensions.CasualGame.UIParticleSystem#OnPopulateMesh","UnityEngine.UI.Extensions.CasualGame.UIParticleSystem#Update","UnityEngine.UI.Extensions.CasualGame.UIParticleSystem#LateUpdate","UnityEngine.UI.Extensions.CasualGame.UIParticleSystem#OnDestroy","UnityEngine.UI.Extensions.CasualGame.UIParticleSystem#StartParticleEmission","UnityEngine.UI.Extensions.CasualGame.UIParticleSystem#StopParticleEmission","UnityEngine.UI.Extensions.CasualGame.UIParticleSystem#PauseParticleEmission"]' ) ); }
 /**
  * @compiler Bridge.NET 17.9.42-luna
  */
@@ -1875,8 +1875,7 @@ if ( TRACE ) { TRACE( "GameManager#CheckInitialBoard", this ); }
                                         continue;
                                 }
                                 case 2: {
-                                    UnityEngine.Debug.Log$1("\ud83d\udd04 \ucd08\uae30 \ubcf4\ub4dc\uc5d0 \uac00\ub2a5\ud55c \uc6c0\uc9c1\uc784\uc774 \uc5c6\uc2b5\ub2c8\ub2e4! \uc790\ub3d9 \uc154\ud50c \uc911...");
-                                        $enumerator.current = this.StartCoroutine$1(this.ShowShuffleMessage());
+                                    $enumerator.current = this.StartCoroutine$1(this.ShowShuffleMessage());
                                         $step = 3;
                                         return true;
                                 }
@@ -1997,8 +1996,7 @@ if ( TRACE ) { TRACE( "GameManager#TrySwap", this ); }
                                         }
                                 }
                                 case 2: {
-                                    UnityEngine.Debug.Log$1("\ud83c\udf89 \ub9e4\uce58 \uc131\uacf5!");
-                                        $enumerator.current = this.StartCoroutine$1(this.DestroyMatchedItems());
+                                    $enumerator.current = this.StartCoroutine$1(this.DestroyMatchedItems());
                                         $step = 3;
                                         return true;
                                 }
@@ -2034,8 +2032,7 @@ if ( TRACE ) { TRACE( "GameManager#TrySwap", this ); }
                                     continue;
                                 }
                                 case 9: {
-                                    UnityEngine.Debug.Log$1("\u274c \ub9e4\uce58 \uc2e4\ud328 - \ub418\ub3cc\ub9ac\uae30");
-                                        $enumerator.current = this.StartCoroutine$1(this.SwapItemsAnimated(a, b));
+                                    $enumerator.current = this.StartCoroutine$1(this.SwapItemsAnimated(a, b));
                                         $step = 10;
                                         return true;
                                 }
@@ -2463,8 +2460,7 @@ if ( TRACE ) { TRACE( "GameManager#RefillBoardAnimated", this ); }
                                         continue;
                                 }
                                 case 5: {
-                                    UnityEngine.Debug.Log$1("\ud83c\udf89 \uc5f0\uc18d \ub9e4\uce58!");
-                                        $enumerator.current = this.StartCoroutine$1(this.DestroyMatchedItems());
+                                    $enumerator.current = this.StartCoroutine$1(this.DestroyMatchedItems());
                                         $step = 6;
                                         return true;
                                 }
@@ -2576,8 +2572,7 @@ if ( TRACE ) { TRACE( "GameManager#ShowShuffleMessage", this ); }
                         for (;;) {
                             switch ($step) {
                                 case 0: {
-                                    UnityEngine.Debug.Log$1("\ud83d\udd04 \uac00\ub2a5\ud55c \uc6c0\uc9c1\uc784\uc774 \uc5c6\uc2b5\ub2c8\ub2e4! \uc790\ub3d9 \uc154\ud50c \uc911...");
-                                        $enumerator.current = new UnityEngine.WaitForSeconds(1.5);
+                                    $enumerator.current = new UnityEngine.WaitForSeconds(1.5);
                                         $step = 1;
                                         return true;
                                 }
@@ -2625,8 +2620,7 @@ if ( TRACE ) { TRACE( "GameManager#ShuffleBoard", this ); }
                         for (;;) {
                             switch ($step) {
                                 case 0: {
-                                    UnityEngine.Debug.Log$1("\ud83c\udfb2 \uc154\ud50c \uc2dc\uc791!");
-                                        itemIds = new (System.Collections.Generic.List$1(System.Int32)).ctor();
+                                    itemIds = new (System.Collections.Generic.List$1(System.Int32)).ctor();
                                         items = new (System.Collections.Generic.List$1(UnityEngine.GameObject)).ctor();
                                         for (var y2 = 0; y2 < 3; y2 = (y2 + 1) | 0) {
                                             for (var x = 0; x < 3; x = (x + 1) | 0) {
@@ -2731,7 +2725,6 @@ if ( TRACE ) { TRACE( "GameManager#ShuffleBoard", this ); }
                                                 items.getItem(k).transform.rotation = pc.Quat.IDENTITY.clone();
                                             }
                                         }
-                                        UnityEngine.Debug.Log$1("\u2705 \uc154\ud50c \uc644\ub8cc!");
                                         if (!this.HasPossibleMoves()) {
                                             $step = 9;
                                             continue;
@@ -2740,8 +2733,7 @@ if ( TRACE ) { TRACE( "GameManager#ShuffleBoard", this ); }
                                         continue;
                                 }
                                 case 9: {
-                                    UnityEngine.Debug.Log$1("\u26a0\ufe0f \uc154\ud50c \ud6c4\uc5d0\ub3c4 \uc6c0\uc9c1\uc784\uc774 \uc5c6\uc2b5\ub2c8\ub2e4. \ubcf4\uc7a5\ub41c \ubc30\uce58 \uc0dd\uc131...");
-                                        $enumerator.current = this.StartCoroutine$1(this.CreateGuaranteedMoveBoard());
+                                    $enumerator.current = this.StartCoroutine$1(this.CreateGuaranteedMoveBoard());
                                         $step = 10;
                                         return true;
                                 }
@@ -2914,7 +2906,6 @@ if ( TRACE ) { TRACE( "GameManager#CreateGuaranteedMoveBoard", this ); }
                                         return true;
                                 }
                                 case 1: {
-                                    UnityEngine.Debug.Log$1("\ud83d\udd27 \ubcf4\uc7a5\ub41c \ubc30\uce58\ub85c \uac15\uc81c \uc0dd\uc131 \uc644\ub8cc!");
 
                                 }
                                 default: {
@@ -3074,19 +3065,10 @@ if ( TRACE ) { TRACE( "TimerSlider#Update", this ); }
                     this.timerSlider.value = this.timeLeft;
                     if (this.timeLeft <= 0.0) {
                         this.timeLeft = 0.0;
-                        this.OnTimeOver();
                     }
                 }
             },
             /*TimerSlider.Update end.*/
-
-            /*TimerSlider.OnTimeOver start.*/
-            OnTimeOver: function () {
-if ( TRACE ) { TRACE( "TimerSlider#OnTimeOver", this ); }
-
-                UnityEngine.Debug.Log$1("\ud83d\udd52 \uc2dc\uac04 \uc885\ub8cc! \uac8c\uc784 \uc624\ubc84 \ucc98\ub9ac");
-            },
-            /*TimerSlider.OnTimeOver end.*/
 
 
         }
@@ -3422,7 +3404,7 @@ if ( TRACE ) { TRACE( "UnityEngine.UI.Extensions.CasualGame.UIParticleSystem#Pau
     /*TextHint end.*/
 
     /*TimerSlider start.*/
-    $m("TimerSlider", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"OnTimeOver","t":8,"sn":"OnTimeOver","rt":$n[1].Void},{"a":1,"n":"Start","t":8,"sn":"Start","rt":$n[1].Void},{"a":1,"n":"Update","t":8,"sn":"Update","rt":$n[1].Void},{"a":1,"n":"timeLeft","t":4,"rt":$n[1].Single,"sn":"timeLeft","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":2,"n":"timerSlider","t":4,"rt":$n[4].Slider,"sn":"timerSlider"},{"a":2,"n":"totalTime","t":4,"rt":$n[1].Single,"sn":"totalTime","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}}]}; }, $n);
+    $m("TimerSlider", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"Start","t":8,"sn":"Start","rt":$n[1].Void},{"a":1,"n":"Update","t":8,"sn":"Update","rt":$n[1].Void},{"a":1,"n":"timeLeft","t":4,"rt":$n[1].Single,"sn":"timeLeft","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":2,"n":"timerSlider","t":4,"rt":$n[4].Slider,"sn":"timerSlider"},{"a":2,"n":"totalTime","t":4,"rt":$n[1].Single,"sn":"totalTime","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}}]}; }, $n);
     /*TimerSlider end.*/
 
     /*UnityEngine.UI.Extensions.CasualGame.UIParticleSystem start.*/
