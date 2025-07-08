@@ -26,11 +26,6 @@ public class Bottle : MonoBehaviour
 		if (originalCase != null)
 		{
 			originalCase.SetCurrentBottle(this);
-			Debug.Log($"{base.name}가 초기 케이스 {originalCase.name}에 설정됨 (LineIndex: {originalCase.lineIndex})");
-		}
-		else
-		{
-			Debug.LogWarning(base.name + "의 초기 부모 Case가 없습니다!");
 		}
 	}
 
@@ -44,7 +39,6 @@ public class Bottle : MonoBehaviour
 		if (originalCase != null)
 		{
 			originalCase.ClearBottle();
-			Debug.Log(base.name + " 부모 케이스(" + originalCase.name + ")에서 제거됨");
 		}
 		base.transform.SetParent(null);
 	}
@@ -77,7 +71,6 @@ public class Bottle : MonoBehaviour
 				base.transform.SetParent(targetCase.transform);
 			}
 			targetCase.SetCurrentBottle(this);
-			Debug.Log($"{base.name}가 케이스 {targetCase.name}에 배치됨 (LineIndex: {targetCase.lineIndex})");
 			PuzzleManager.Instance.CheckAndClearLine(targetCase.lineIndex);
 			return;
 		}
@@ -94,12 +87,10 @@ public class Bottle : MonoBehaviour
 				base.transform.SetParent(originalCase.transform);
 			}
 			originalCase.SetCurrentBottle(this);
-			Debug.Log(base.name + "가 원래 케이스 " + originalCase.name + "로 복귀됨");
 		}
 		else
 		{
 			base.transform.SetParent(null);
-			Debug.Log(base.name + "가 원래 자리로 복귀됨 (원래 케이스 없음 또는 비어 있지 않음)");
 		}
 	}
 
@@ -116,20 +107,16 @@ public class Bottle : MonoBehaviour
 		Case bestCase = null;
 		foreach (Case c in PuzzleManager.Instance.AllCases)
 		{
-			if (c == null || !c.IsEmpty())
+			if (!(c == null) && !(c.gameObject == null) && c.IsEmpty())
 			{
-				Debug.Log($"케이스 {c?.name} 스킵됨 (null: {c == null}, 비어 있지 않음: {c != null && !c.IsEmpty()})");
-				continue;
-			}
-			float dist = Vector3.Distance(c.GetSnapPosition(), base.transform.position);
-			Debug.Log($"케이스 {c.name} 거리: {dist}, 비어 있음: {c.IsEmpty()}");
-			if (dist < 1f && c.IsEmpty() && dist < minDist)
-			{
-				minDist = dist;
-				bestCase = c;
+				float dist = Vector3.Distance(c.GetSnapPosition(), base.transform.position);
+				if (dist < 1f && dist < minDist)
+				{
+					minDist = dist;
+					bestCase = c;
+				}
 			}
 		}
-		Debug.Log(string.Format("선택된 케이스: {0}, 최소 거리: {1}", (bestCase != null) ? bestCase.name : "null", minDist));
 		return bestCase;
 	}
 }

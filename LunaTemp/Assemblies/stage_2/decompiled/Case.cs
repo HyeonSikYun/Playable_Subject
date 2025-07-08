@@ -27,11 +27,6 @@ public class Case : MonoBehaviour
 		{
 			currentBottle = bottle;
 			bottle.transform.SetParent((snapPoint != null) ? snapPoint : base.transform);
-			Debug.Log($"케이스 {base.name}에 초기 병 {bottle.name} 설정됨 (LineIndex: {lineIndex}, BottleColor: {bottle.BottleColor})");
-		}
-		else if (bottle == null)
-		{
-			Debug.LogWarning($"케이스 {base.name}에 초기 병이 없습니다 (LineIndex: {lineIndex})");
 		}
 	}
 
@@ -43,18 +38,10 @@ public class Case : MonoBehaviour
 	public void SetCurrentBottle(Bottle bottle)
 	{
 		currentBottle = bottle;
-		if (bottle != null)
-		{
-			Debug.Log("케이스 " + base.name + "에 병 " + bottle.name + " 설정됨");
-		}
 	}
 
 	public void ClearBottle()
 	{
-		if (currentBottle != null)
-		{
-			Debug.Log("케이스 " + base.name + "에서 병 " + currentBottle.name + " 제거됨");
-		}
 		currentBottle = null;
 	}
 

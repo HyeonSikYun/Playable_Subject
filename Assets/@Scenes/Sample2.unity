@@ -781,6 +781,7 @@ GameObject:
   - component: {fileID: 232444732}
   - component: {fileID: 232444734}
   - component: {fileID: 232444733}
+  - component: {fileID: 232444735}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -848,6 +849,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 232444731}
   m_CullTransparentMesh: 1
+--- !u!114 &232444735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232444731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6689cebc09f96b44a7afb2c9234fa30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topImage: {fileID: 426229725}
+  middleImage: {fileID: 714571571}
+  bottomButton: {fileID: 816965256}
+  aspectThreshold: 0.7
 --- !u!1001 &304969630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2580,7 +2597,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 120}
+  m_AnchoredPosition: {x: 0, y: 60}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &816965257
@@ -3735,8 +3752,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

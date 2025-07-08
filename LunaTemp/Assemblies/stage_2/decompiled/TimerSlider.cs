@@ -7,24 +7,38 @@ public class TimerSlider : MonoBehaviour
 
 	public float totalTime = 10f;
 
+	public GameObject resultPanel;
+
 	private float timeLeft;
+
+	private bool isFinished = false;
 
 	private void Start()
 	{
 		timeLeft = totalTime;
 		timerSlider.maxValue = totalTime;
 		timerSlider.value = totalTime;
+		if (resultPanel != null)
+		{
+			resultPanel.SetActive(false);
+		}
 	}
 
 	private void Update()
 	{
-		if (timeLeft > 0f)
+		if (isFinished || !(timeLeft > 0f))
 		{
-			timeLeft -= Time.deltaTime;
-			timerSlider.value = timeLeft;
-			if (timeLeft <= 0f)
+			return;
+		}
+		timeLeft -= Time.deltaTime;
+		timerSlider.value = timeLeft;
+		if (timeLeft <= 0f)
+		{
+			timeLeft = 0f;
+			isFinished = true;
+			if (resultPanel != null)
 			{
-				timeLeft = 0f;
+				resultPanel.SetActive(true);
 			}
 		}
 	}

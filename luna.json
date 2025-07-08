@@ -1550,10 +1550,6 @@
                 "excluded": true
             },
             {
-                "name": "UnityEngine.ArgumentCache",
-                "excluded": true
-            },
-            {
                 "name": "UnityEngine.Assertions.Assert",
                 "excluded": true
             },
@@ -1838,15 +1834,7 @@
                 "excluded": true
             },
             {
-                "name": "UnityEngine.Resolution",
-                "excluded": true
-            },
-            {
                 "name": "UnityEngine.RootMotionData",
-                "excluded": true
-            },
-            {
-                "name": "UnityEngine.Screen",
                 "excluded": true
             },
             {
@@ -2075,10 +2063,6 @@
             },
             {
                 "name": "UnityEngine.AvatarMask",
-                "excluded": true
-            },
-            {
-                "name": "UnityEngine.Events.UnityEvent",
                 "excluded": true
             },
             {
@@ -2371,10 +2355,6 @@
             },
             {
                 "name": "UnityEngine.Joint",
-                "excluded": true
-            },
-            {
-                "name": "UnityEngine.MeshFilter",
                 "excluded": true
             },
             {
@@ -3963,11 +3943,11 @@
             },
             {
                 "name": "UnityEngine.Events.PersistentListenerMode",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "UnityEngine.Events.UnityEventCallState",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "UnityEngine.EventSystems.EventHandle",
@@ -6550,10 +6530,6 @@
                 "excluded": true
             },
             {
-                "name": "UnityEngine.UI.Button",
-                "excluded": true
-            },
-            {
                 "name": "UnityEngine.UI.Dropdown",
                 "excluded": true
             },
@@ -6611,7 +6587,7 @@
             },
             {
                 "name": "UnityEngine.UI.Button.ButtonClickedEvent",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "UnityEngine.UI.CanvasScaler.ScaleMode",
@@ -6635,11 +6611,11 @@
             },
             {
                 "name": "UnityEngine.UI.CoroutineTween.ColorTween.ColorTweenCallback",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "UnityEngine.UI.CoroutineTween.ColorTween.ColorTweenMode",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "UnityEngine.UI.CoroutineTween.FloatTween.FloatTweenCallback",
@@ -11075,7 +11051,7 @@
                 "instanceMethods": [
                     {
                         "name": "getDefaultValue",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "init",
@@ -12293,7 +12269,7 @@
                     },
                     {
                         "name": "GetEnumerator",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "System$Collections$Generic$IEnumerable$1$GetEnumerator",
@@ -12357,11 +12333,11 @@
                     },
                     {
                         "name": "IncreaseCapacity",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetCapacity",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "AddIfNotPresent",
@@ -12449,7 +12425,7 @@
                     },
                     {
                         "name": "Current#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "System$Collections$IEnumerator$Current#get",
@@ -12457,11 +12433,11 @@
                     },
                     {
                         "name": "init",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "$ctor1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ctor",
@@ -12469,11 +12445,11 @@
                     },
                     {
                         "name": "Dispose",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "moveNext",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "System$Collections$IEnumerator$reset",
@@ -12519,7 +12495,7 @@
                     },
                     {
                         "name": "$clone",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -15223,7 +15199,7 @@
                     },
                     {
                         "name": "UnsafeAddListener",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "UnsafeRemoveListener",
@@ -15535,7 +15511,7 @@
                     },
                     {
                         "name": "LerpUnclamped",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Approximately",
@@ -17255,7 +17231,7 @@
                     },
                     {
                         "name": "Cancel",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Update",
@@ -17285,7 +17261,7 @@
                     },
                     {
                         "name": "AddListener",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "RemoveListener",
@@ -18249,7 +18225,7 @@
                     },
                     {
                         "name": "SetParent",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "DetachChildren",
@@ -18297,7 +18273,7 @@
                     },
                     {
                         "name": "Find",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "FindChild",
@@ -20137,7 +20113,7 @@
                     },
                     {
                         "name": "targetDisplay#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "targetDisplay#set",
@@ -20323,7 +20299,7 @@
                     },
                     {
                         "name": "highlightedColor#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "highlightedColor#set",
@@ -20331,7 +20307,7 @@
                     },
                     {
                         "name": "pressedColor#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "pressedColor#set",
@@ -20339,7 +20315,7 @@
                     },
                     {
                         "name": "selectedColor#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "selectedColor#set",
@@ -20363,7 +20339,7 @@
                     },
                     {
                         "name": "fadeDuration#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "fadeDuration#set",
@@ -20435,7 +20411,7 @@
                     },
                     {
                         "name": "mode#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "mode#set",
@@ -20535,7 +20511,7 @@
                     },
                     {
                         "name": "highlightedSprite#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "highlightedSprite#set",
@@ -20543,7 +20519,7 @@
                     },
                     {
                         "name": "pressedSprite#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "pressedSprite#set",
@@ -20551,7 +20527,7 @@
                     },
                     {
                         "name": "selectedSprite#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "selectedSprite#set",
@@ -20663,7 +20639,7 @@
                 "instanceMethods": [
                     {
                         "name": "Start",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Init",
@@ -20671,7 +20647,7 @@
                     },
                     {
                         "name": "StartTween",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "StopTween",
@@ -23315,7 +23291,7 @@
                     },
                     {
                         "name": "OnTweenCallback",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnTweenCallback$1",
@@ -23885,11 +23861,11 @@
                 "instanceMethods": [
                     {
                         "name": "renderOrderPriority#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "sortOrderPriority#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "rootRaycaster#get",
@@ -23949,11 +23925,11 @@
                     },
                     {
                         "name": "init",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Invoke",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -24157,7 +24133,7 @@
                     },
                     {
                         "name": "SetColor",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "DisableRectClipping",
@@ -24533,7 +24509,7 @@
                     },
                     {
                         "name": "startColor#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "targetColor#get",
@@ -24541,7 +24517,7 @@
                     },
                     {
                         "name": "targetColor#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "tweenMode#get",
@@ -24549,39 +24525,39 @@
                     },
                     {
                         "name": "tweenMode#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "duration#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "duration#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ignoreTimeScale#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ignoreTimeScale#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "init",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ctor",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "TweenValue",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "AddOnChangedCallback",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetIgnoreTimescale",
@@ -24593,7 +24569,7 @@
                     },
                     {
                         "name": "ValidTarget",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "getHashCode",
@@ -24605,7 +24581,7 @@
                     },
                     {
                         "name": "$clone",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -25919,7 +25895,7 @@
                     },
                     {
                         "name": "ResizeInternalArray",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ResizeInternalArray$1",
@@ -26035,7 +26011,7 @@
                     },
                     {
                         "name": "InsertNewLine",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SaveWordWrappingState",
@@ -26043,7 +26019,7 @@
                     },
                     {
                         "name": "RestoreWordWrappingState",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SaveGlyphVertexInfo",
@@ -27243,7 +27219,7 @@
                     },
                     {
                         "name": "highlightedTrigger#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "highlightedTrigger#set",
@@ -27251,7 +27227,7 @@
                     },
                     {
                         "name": "pressedTrigger#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "pressedTrigger#set",
@@ -27259,7 +27235,7 @@
                     },
                     {
                         "name": "selectedTrigger#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "selectedTrigger#set",
@@ -28649,7 +28625,7 @@
                     },
                     {
                         "name": "Resize",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Resize$1",
@@ -28983,7 +28959,7 @@
                 "instanceMethods": [
                     {
                         "name": "getDefaultValue",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ctor",
@@ -29003,7 +28979,7 @@
                     },
                     {
                         "name": "$clone",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -29363,7 +29339,7 @@
                     },
                     {
                         "name": "Despawn",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "PurgeAll",
@@ -29483,7 +29459,7 @@
                     },
                     {
                         "name": "MarkForKilling",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "EvaluateTweenLink",
@@ -29495,15 +29471,15 @@
                     },
                     {
                         "name": "ReorganizeActiveTweens",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "DespawnActiveTweens",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "RemoveActiveTween",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ClearTweenArray",
@@ -30061,7 +30037,7 @@
                     },
                     {
                         "name": "DOMoveY",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "DOMoveZ",
@@ -30431,7 +30407,7 @@
                     },
                     {
                         "name": "OnComplete",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnKill",
@@ -30559,7 +30535,7 @@
                     },
                     {
                         "name": "SetOptions$12",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetOptions$15",
@@ -30723,7 +30699,7 @@
                 "instanceMethods": [
                     {
                         "name": "Reset",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetFrom$1",
@@ -30842,6 +30818,366 @@
                     {
                         "name": "SetClass",
                         "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.Events.UnityEvent",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Invoke",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Invoke$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "AddListener",
+                        "excluded": true
+                    },
+                    {
+                        "name": "RemoveListener",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.MeshFilter",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "mesh#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "mesh#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "sharedMesh#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "sharedMesh#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": true
+                    },
+                    {
+                        "name": "UpdateMeshInHandle",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.UI.Button",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "onClick#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "onClick#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "$ctor1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnPointerClick",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnSubmit",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Press",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnFinishSubmit",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ConfigureForEntity",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "Bottle",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "BottleColor#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Start",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnMouseDown",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnMouseDrag",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnMouseUp",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetMouseWorldPos",
+                        "excluded": false
+                    },
+                    {
+                        "name": "FindClosestValidCase",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "ButtonPulse",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEnable",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnDisable",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Case",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "CaseColor#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Start",
+                        "excluded": false
+                    },
+                    {
+                        "name": "IsEmpty",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetCurrentBottle",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ClearBottle",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetCurrentBottle",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetSnapPosition",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "PuzzleManager",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "Awake",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TestInitialLines",
+                        "excluded": false
+                    },
+                    {
+                        "name": "CheckAndClearLine",
+                        "excluded": false
+                    },
+                    {
+                        "name": "IsLineMatching",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ClearLine",
+                        "excluded": false
+                    },
+                    {
+                        "name": "IsColorMatch",
+                        "excluded": false
+                    },
+                    {
+                        "name": "DropLinesAbove",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ShowGoodEffect",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.Resolution",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "getDefaultValue",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "getHashCode",
+                        "excluded": true
+                    },
+                    {
+                        "name": "equals",
+                        "excluded": true
+                    },
+                    {
+                        "name": "$clone",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.Screen",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "width#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "height#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "safeArea#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "currentResolution#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "fullScreen#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "fullScreen#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "dpi#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "dpi#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "orientation#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "orientation#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "sleepTimeout#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "sleepTimeout#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "autorotateToLandscapeLeft#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "autorotateToLandscapeLeft#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "autorotateToLandscapeRight#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "autorotateToLandscapeRight#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "autorotateToPortrait#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "autorotateToPortrait#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "autorotateToPortraitUpsideDown#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "autorotateToPortraitUpsideDown#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.ArgumentCache",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
                     }
                 ]
             }

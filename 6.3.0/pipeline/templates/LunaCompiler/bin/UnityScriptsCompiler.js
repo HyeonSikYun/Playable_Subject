@@ -38,9 +38,6 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
                 this.originalCase = this.GetComponentInParent(Case);
                 if (UnityEngine.MonoBehaviour.op_Inequality(this.originalCase, null)) {
                     this.originalCase.SetCurrentBottle(this);
-                    UnityEngine.Debug.Log$1(System.String.format("{0}\uac00 \ucd08\uae30 \ucf00\uc774\uc2a4 {1}\uc5d0 \uc124\uc815\ub428 (LineIndex: {2})", Bridge.ensureBaseProperty(this, "name").$UnityEngine$Component$name, this.originalCase.name, Bridge.box(this.originalCase.lineIndex, System.Int32)));
-                } else {
-                    UnityEngine.Debug.LogWarning$1((Bridge.ensureBaseProperty(this, "name").$UnityEngine$Component$name || "") + "\uc758 \ucd08\uae30 \ubd80\ubaa8 Case\uac00 \uc5c6\uc2b5\ub2c8\ub2e4!");
                 }
             },
             /*Bottle.Start end.*/
@@ -54,7 +51,6 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
                 this.originalCase = this.transform.GetComponentInParent(Case);
                 if (UnityEngine.MonoBehaviour.op_Inequality(this.originalCase, null)) {
                     this.originalCase.ClearBottle();
-                    UnityEngine.Debug.Log$1((Bridge.ensureBaseProperty(this, "name").$UnityEngine$Component$name || "") + " \ubd80\ubaa8 \ucf00\uc774\uc2a4(" + (this.originalCase.name || "") + ")\uc5d0\uc11c \uc81c\uac70\ub428");
                 }
                 this.transform.SetParent(null);
             },
@@ -84,7 +80,6 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
                         this.transform.SetParent(targetCase.transform);
                     }
                     targetCase.SetCurrentBottle(this);
-                    UnityEngine.Debug.Log$1(System.String.format("{0}\uac00 \ucf00\uc774\uc2a4 {1}\uc5d0 \ubc30\uce58\ub428 (LineIndex: {2})", Bridge.ensureBaseProperty(this, "name").$UnityEngine$Component$name, targetCase.name, Bridge.box(targetCase.lineIndex, System.Int32)));
                     PuzzleManager.Instance.CheckAndClearLine(targetCase.lineIndex);
                     return;
                 }
@@ -97,10 +92,8 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
                         this.transform.SetParent(this.originalCase.transform);
                     }
                     this.originalCase.SetCurrentBottle(this);
-                    UnityEngine.Debug.Log$1((Bridge.ensureBaseProperty(this, "name").$UnityEngine$Component$name || "") + "\uac00 \uc6d0\ub798 \ucf00\uc774\uc2a4 " + (this.originalCase.name || "") + "\ub85c \ubcf5\uadc0\ub428");
                 } else {
                     this.transform.SetParent(null);
-                    UnityEngine.Debug.Log$1((Bridge.ensureBaseProperty(this, "name").$UnityEngine$Component$name || "") + "\uac00 \uc6d0\ub798 \uc790\ub9ac\ub85c \ubcf5\uadc0\ub428 (\uc6d0\ub798 \ucf00\uc774\uc2a4 \uc5c6\uc74c \ub610\ub294 \ube44\uc5b4 \uc788\uc9c0 \uc54a\uc74c)");
                 }
             },
             /*Bottle.OnMouseUp end.*/
@@ -122,15 +115,12 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
                 try {
                     while ($t.moveNext()) {
                         var c = $t.Current;
-                        if (UnityEngine.MonoBehaviour.op_Equality(c, null) || !c.IsEmpty()) {
-                            UnityEngine.Debug.Log$1(System.String.format("\ucf00\uc774\uc2a4 {0} \uc2a4\ud0b5\ub428 (null: {1}, \ube44\uc5b4 \uc788\uc9c0 \uc54a\uc74c: {2})", UnityEngine.MonoBehaviour.op_Inequality(c, null) ? c.name : null, Bridge.box(UnityEngine.MonoBehaviour.op_Equality(c, null), System.Boolean, System.Boolean.toString), Bridge.box(UnityEngine.MonoBehaviour.op_Inequality(c, null) && !c.IsEmpty(), System.Boolean, System.Boolean.toString)));
-                            continue;
-                        }
-                        var dist = pc.Vec3.distance( c.GetSnapPosition(), this.transform.position );
-                        UnityEngine.Debug.Log$1(System.String.format("\ucf00\uc774\uc2a4 {0} \uac70\ub9ac: {1}, \ube44\uc5b4 \uc788\uc74c: {2}", c.name, Bridge.box(dist, System.Single, System.Single.format, System.Single.getHashCode), Bridge.box(c.IsEmpty(), System.Boolean, System.Boolean.toString)));
-                        if (dist < 1.0 && c.IsEmpty() && dist < minDist) {
-                            minDist = dist;
-                            bestCase = c;
+                        if (!(UnityEngine.MonoBehaviour.op_Equality(c, null)) && !(UnityEngine.GameObject.op_Equality(c.gameObject, null)) && c.IsEmpty()) {
+                            var dist = pc.Vec3.distance( c.GetSnapPosition(), this.transform.position );
+                            if (dist < 1.0 && dist < minDist) {
+                                minDist = dist;
+                                bestCase = c;
+                            }
                         }
                     }
                 } finally {
@@ -138,7 +128,6 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
                         $t.System$IDisposable$Dispose();
                     }
                 }
-                UnityEngine.Debug.Log$1(System.String.format("\uc120\ud0dd\ub41c \ucf00\uc774\uc2a4: {0}, \ucd5c\uc18c \uac70\ub9ac: {1}", (UnityEngine.MonoBehaviour.op_Inequality(bestCase, null)) ? bestCase.name : "null", Bridge.box(minDist, System.Single, System.Single.format, System.Single.getHashCode)));
                 return bestCase;
             },
             /*Bottle.FindClosestValidCase end.*/
@@ -147,6 +136,41 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
         }
     });
     /*Bottle end.*/
+
+    /*ButtonPulse start.*/
+    Bridge.define("ButtonPulse", {
+        inherits: [UnityEngine.MonoBehaviour],
+        fields: {
+            scaleMultiplier: 0,
+            duration: 0,
+            originalScale: null
+        },
+        ctors: {
+            init: function () {
+                this.originalScale = new UnityEngine.Vector3();
+                this.scaleMultiplier = 1.05;
+                this.duration = 0.5;
+            }
+        },
+        methods: {
+            /*ButtonPulse.OnEnable start.*/
+            OnEnable: function () {
+                this.originalScale = this.transform.localScale.$clone();
+                DG.Tweening.TweenSettingsExtensions.SetEase$2(DG.Tweening.Core.TweenerCore$3(UnityEngine.Vector3,UnityEngine.Vector3,DG.Tweening.Plugins.Options.VectorOptions), DG.Tweening.TweenSettingsExtensions.SetLoops$1(DG.Tweening.Core.TweenerCore$3(UnityEngine.Vector3,UnityEngine.Vector3,DG.Tweening.Plugins.Options.VectorOptions), DG.Tweening.ShortcutExtensions.DOScale$1(this.transform, this.originalScale.$clone().clone().scale( this.scaleMultiplier ), this.duration), -1, DG.Tweening.LoopType.Yoyo), DG.Tweening.Ease.InOutSine);
+            },
+            /*ButtonPulse.OnEnable end.*/
+
+            /*ButtonPulse.OnDisable start.*/
+            OnDisable: function () {
+                DG.Tweening.ShortcutExtensions.DOKill(this.transform);
+                this.transform.localScale = this.originalScale.$clone();
+            },
+            /*ButtonPulse.OnDisable end.*/
+
+
+        }
+    });
+    /*ButtonPulse end.*/
 
     /*Case start.*/
     Bridge.define("Case", {
@@ -182,9 +206,6 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
                 if (UnityEngine.MonoBehaviour.op_Inequality(bottle, null) && UnityEngine.MonoBehaviour.op_Equality(this.currentBottle, null)) {
                     this.currentBottle = bottle;
                     bottle.transform.SetParent((UnityEngine.Component.op_Inequality(snapPoint, null)) ? snapPoint : this.transform);
-                    UnityEngine.Debug.Log$1(System.String.format("\ucf00\uc774\uc2a4 {0}\uc5d0 \ucd08\uae30 \ubcd1 {1} \uc124\uc815\ub428 (LineIndex: {2}, BottleColor: {3})", Bridge.ensureBaseProperty(this, "name").$UnityEngine$Component$name, bottle.name, Bridge.box(this.lineIndex, System.Int32), bottle.BottleColor.$clone()));
-                } else if (UnityEngine.MonoBehaviour.op_Equality(bottle, null)) {
-                    UnityEngine.Debug.LogWarning$1(System.String.format("\ucf00\uc774\uc2a4 {0}\uc5d0 \ucd08\uae30 \ubcd1\uc774 \uc5c6\uc2b5\ub2c8\ub2e4 (LineIndex: {1})", Bridge.ensureBaseProperty(this, "name").$UnityEngine$Component$name, Bridge.box(this.lineIndex, System.Int32)));
                 }
             },
             /*Case.Start end.*/
@@ -198,17 +219,11 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
             /*Case.SetCurrentBottle start.*/
             SetCurrentBottle: function (bottle) {
                 this.currentBottle = bottle;
-                if (UnityEngine.MonoBehaviour.op_Inequality(bottle, null)) {
-                    UnityEngine.Debug.Log$1("\ucf00\uc774\uc2a4 " + (Bridge.ensureBaseProperty(this, "name").$UnityEngine$Component$name || "") + "\uc5d0 \ubcd1 " + (bottle.name || "") + " \uc124\uc815\ub428");
-                }
             },
             /*Case.SetCurrentBottle end.*/
 
             /*Case.ClearBottle start.*/
             ClearBottle: function () {
-                if (UnityEngine.MonoBehaviour.op_Inequality(this.currentBottle, null)) {
-                    UnityEngine.Debug.Log$1("\ucf00\uc774\uc2a4 " + (Bridge.ensureBaseProperty(this, "name").$UnityEngine$Component$name || "") + "\uc5d0\uc11c \ubcd1 " + (this.currentBottle.name || "") + " \uc81c\uac70\ub428");
-                }
                 this.currentBottle = null;
             },
             /*Case.ClearBottle end.*/
@@ -2949,33 +2964,17 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
             }
         },
         fields: {
-            AllCases: null
+            AllCases: null,
+            goodEffectPrefabs: null,
+            uiCanvas: null
         },
         methods: {
             /*PuzzleManager.Awake start.*/
             Awake: function () {
-                var $t;
                 PuzzleManager.Instance = this;
-                if (this.AllCases == null || this.AllCases.Count === 0) {
-                    UnityEngine.Debug.LogWarning$1("AllCases\uac00 \ube44\uc5b4 \uc788\uac70\ub098 null\uc785\ub2c8\ub2e4!");
-                    return;
+                if (this.AllCases != null && this.AllCases.Count !== 0) {
+                    this.TestInitialLines();
                 }
-                $t = Bridge.getEnumerator(this.AllCases);
-                try {
-                    while ($t.moveNext()) {
-                        var c = $t.Current;
-                        if (UnityEngine.MonoBehaviour.op_Equality(c, null)) {
-                            UnityEngine.Debug.LogWarning$1("AllCases\uc5d0 null \ucf00\uc774\uc2a4\uac00 \ud3ec\ud568\ub418\uc5b4 \uc788\uc2b5\ub2c8\ub2e4!");
-                            continue;
-                        }
-                        UnityEngine.Debug.Log$1(System.String.format("Case: {0}, LineIndex: {1}, CaseColor: {2}, \ubcd1: {3}", c.name, Bridge.box(c.lineIndex, System.Int32), c.CaseColor.$clone(), (UnityEngine.MonoBehaviour.op_Inequality(c.GetCurrentBottle(), null)) ? c.GetCurrentBottle().name : "null"));
-                    }
-                } finally {
-                    if (Bridge.is($t, System.IDisposable)) {
-                        $t.System$IDisposable$Dispose();
-                    }
-                }
-                this.TestInitialLines();
             },
             /*PuzzleManager.Awake end.*/
 
@@ -3000,7 +2999,6 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
                 try {
                     while ($t1.moveNext()) {
                         var lineIndex = $t1.Current;
-                        UnityEngine.Debug.Log$1(System.String.format("\ucd08\uae30 \ub77c\uc778 {0} \ud14c\uc2a4\ud2b8 \uc2dc\uc791", [Bridge.box(lineIndex, System.Int32)]));
                         this.CheckAndClearLine(lineIndex);
                     }
                 } finally {
@@ -3013,31 +3011,13 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
 
             /*PuzzleManager.CheckAndClearLine start.*/
             CheckAndClearLine: function (lineIndex) {
-                var $t;
-                if (this.AllCases == null || this.AllCases.Count === 0) {
-                    UnityEngine.Debug.LogWarning$1("AllCases\uac00 null\uc774\uac70\ub098 \ube44\uc5b4 \uc788\uc2b5\ub2c8\ub2e4!");
-                    return;
-                }
-                var lineCases = this.AllCases.FindAll(function (c) {
-                    return UnityEngine.MonoBehaviour.op_Inequality(c, null) && c.lineIndex === lineIndex;
-                });
-                UnityEngine.Debug.Log$1(System.String.format("\ub77c\uc778 {0} \uac80\uc0ac \uc2dc\uc791, \ucf00\uc774\uc2a4 \uac1c\uc218: {1}", Bridge.box(lineIndex, System.Int32), Bridge.box(lineCases.Count, System.Int32)));
-                $t = Bridge.getEnumerator(lineCases);
-                try {
-                    while ($t.moveNext()) {
-                        var c2 = $t.Current;
-                        UnityEngine.Debug.Log$1(System.String.format("\ucf00\uc774\uc2a4: {0}, \ube44\uc5b4 \uc788\uc74c: {1}, \ubcd1: {2}, CaseColor: {3}", c2.name, Bridge.box(c2.IsEmpty(), System.Boolean, System.Boolean.toString), (UnityEngine.MonoBehaviour.op_Inequality(c2.GetCurrentBottle(), null)) ? c2.GetCurrentBottle().name : "null", c2.CaseColor.$clone()));
+                if (this.AllCases != null && this.AllCases.Count !== 0) {
+                    var lineCases = this.AllCases.FindAll(function (c) {
+                        return UnityEngine.MonoBehaviour.op_Inequality(c, null) && c.lineIndex === lineIndex;
+                    });
+                    if (this.IsLineMatching(lineCases)) {
+                        this.ClearLine(lineCases);
                     }
-                } finally {
-                    if (Bridge.is($t, System.IDisposable)) {
-                        $t.System$IDisposable$Dispose();
-                    }
-                }
-                if (this.IsLineMatching(lineCases)) {
-                    UnityEngine.Debug.Log$1(System.String.format("\ub77c\uc778 {0} \ub9e4\uce58 \uc131\uacf5! \ubcd1 \uc0ad\uc81c \ucc98\ub9ac", [Bridge.box(lineIndex, System.Int32)]));
-                    this.ClearLine(lineCases);
-                } else {
-                    UnityEngine.Debug.Log$1(System.String.format("\ub77c\uc778 {0} \ub9e4\uce58 \uc2e4\ud328", [Bridge.box(lineIndex, System.Int32)]));
                 }
             },
             /*PuzzleManager.CheckAndClearLine end.*/
@@ -3046,7 +3026,6 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
             IsLineMatching: function (line) {
                 var $t;
                 if (line == null || line.Count === 0) {
-                    UnityEngine.Debug.LogWarning$1("\ub77c\uc778\uc5d0 \ucf00\uc774\uc2a4\uac00 \uc5c6\uac70\ub098 null\uc785\ub2c8\ub2e4.");
                     return false;
                 }
                 $t = Bridge.getEnumerator(line);
@@ -3054,22 +3033,16 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
                     while ($t.moveNext()) {
                         var c = $t.Current;
                         if (UnityEngine.MonoBehaviour.op_Equality(c, null)) {
-                            UnityEngine.Debug.LogWarning$1("\ucf00\uc774\uc2a4\uac00 null\uc785\ub2c8\ub2e4.");
                             return false;
                         }
                         if (c.IsEmpty()) {
-                            UnityEngine.Debug.Log$1("\ucf00\uc774\uc2a4 " + (c.name || "") + "\uac00 \ube44\uc5b4 \uc788\uc2b5\ub2c8\ub2e4.");
                             return false;
                         }
                         var b = c.GetCurrentBottle();
                         if (UnityEngine.MonoBehaviour.op_Equality(b, null)) {
-                            UnityEngine.Debug.Log$1("\ucf00\uc774\uc2a4 " + (c.name || "") + "\uc5d0 \ubcd1\uc774 null\uc785\ub2c8\ub2e4.");
                             return false;
                         }
-                        var match = this.IsColorMatch(b.BottleColor.$clone(), c.CaseColor.$clone());
-                        UnityEngine.Debug.Log$1(System.String.format("\ube44\uad50 \uacb0\uacfc: {0} / Bottle: {1}, Case: {2}", Bridge.box(match, System.Boolean, System.Boolean.toString), b.BottleColor.$clone(), c.CaseColor.$clone()));
-                        if (!match) {
-                            UnityEngine.Debug.Log$1(System.String.format("\ucc44\ub110\ubcc4 \ucc28\uc774 - R: {0}, G: {1}, B: {2}, A: {3}", Bridge.box(Math.abs(b.BottleColor.r - c.CaseColor.r), System.Single, System.Single.format, System.Single.getHashCode), Bridge.box(Math.abs(b.BottleColor.g - c.CaseColor.g), System.Single, System.Single.format, System.Single.getHashCode), Bridge.box(Math.abs(b.BottleColor.b - c.CaseColor.b), System.Single, System.Single.format, System.Single.getHashCode), Bridge.box(Math.abs(b.BottleColor.a - c.CaseColor.a), System.Single, System.Single.format, System.Single.getHashCode)));
+                        if (!this.IsColorMatch(b.BottleColor.$clone(), c.CaseColor.$clone())) {
                             return false;
                         }
                     }
@@ -3085,22 +3058,30 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
             /*PuzzleManager.ClearLine start.*/
             ClearLine: function (line) {
                 var $t;
+                if (line == null || line.Count === 0) {
+                    return;
+                }
+                var deletedLineIndex = line.getItem(0).lineIndex;
                 $t = Bridge.getEnumerator(line);
                 try {
                     while ($t.moveNext()) {
                         var c = $t.Current;
-                        var b = c.GetCurrentBottle();
-                        if (UnityEngine.MonoBehaviour.op_Inequality(b, null)) {
-                            UnityEngine.Debug.Log$1("\ubcd1 " + (b.name || "") + " \uc0ad\uc81c \uc911 (\ucf00\uc774\uc2a4: " + (c.name || "") + ")");
-                            UnityEngine.Object.Destroy(b.gameObject);
+                        if (!(UnityEngine.MonoBehaviour.op_Equality(c, null))) {
+                            var b = c.GetCurrentBottle();
+                            if (UnityEngine.MonoBehaviour.op_Inequality(b, null)) {
+                                UnityEngine.Object.Destroy(b.gameObject);
+                            }
+                            c.ClearBottle();
+                            this.AllCases.remove(c);
+                            UnityEngine.Object.Destroy(c.gameObject);
                         }
-                        c.ClearBottle();
                     }
                 } finally {
                     if (Bridge.is($t, System.IDisposable)) {
                         $t.System$IDisposable$Dispose();
                     }
                 }
+                this.DropLinesAbove(deletedLineIndex);
             },
             /*PuzzleManager.ClearLine end.*/
 
@@ -3110,6 +3091,118 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
                 return Math.abs(a.r - b.r) < tolerance && Math.abs(a.g - b.g) < tolerance && Math.abs(a.b - b.b) < tolerance && Math.abs(a.a - b.a) < tolerance;
             },
             /*PuzzleManager.IsColorMatch end.*/
+
+            /*PuzzleManager.DropLinesAbove start.*/
+            DropLinesAbove: function (deletedLineIndex) {
+                var $t;
+                var lineHeight = 1.65;
+                var worldPos = new pc.Vec3( 0.0, 0.0, 15.0 );
+                this.StartCoroutine$1(this.ShowGoodEffect(worldPos.$clone()));
+                $t = Bridge.getEnumerator(this.AllCases);
+                try {
+                    while ($t.moveNext()) {
+                        var c = { v : $t.Current };
+                        if (!(UnityEngine.MonoBehaviour.op_Equality(c.v, null)) && c.v.lineIndex > deletedLineIndex) {
+                            var oldIndex = { v : c.v.lineIndex };
+                            c.v.lineIndex = (c.v.lineIndex - 1) | 0;
+                            var newPos = c.v.transform.position.$clone().add( pc.Vec3.DOWN.clone().clone().scale( lineHeight ) );
+                            DG.Tweening.TweenSettingsExtensions.OnComplete(DG.Tweening.Core.TweenerCore$3(UnityEngine.Vector3,UnityEngine.Vector3,DG.Tweening.Plugins.Options.VectorOptions), DG.Tweening.TweenSettingsExtensions.SetEase$2(DG.Tweening.Core.TweenerCore$3(UnityEngine.Vector3,UnityEngine.Vector3,DG.Tweening.Plugins.Options.VectorOptions), DG.Tweening.ShortcutExtensions.DOMoveY(c.v.transform, newPos.y, 0.3), DG.Tweening.Ease.OutQuad), (function ($me, c, oldIndex) {
+                                return function () {
+                                    UnityEngine.Debug.Log$1(System.String.format("{0} \uc560\ub2c8\uba54\uc774\uc158 \uc644\ub8cc: {1} \u2192 {2}", c.v.name, Bridge.box(oldIndex.v, System.Int32), Bridge.box(c.v.lineIndex, System.Int32)));
+                                };
+                            })(this, c, oldIndex));
+                        }
+                    }
+                } finally {
+                    if (Bridge.is($t, System.IDisposable)) {
+                        $t.System$IDisposable$Dispose();
+                    }
+                }
+            },
+            /*PuzzleManager.DropLinesAbove end.*/
+
+            /*PuzzleManager.ShowGoodEffect start.*/
+            ShowGoodEffect: function (worldPosition) {
+                var $step = 0,
+                    $jumpFromFinally,
+                    $returnValue,
+                    randomIndex,
+                    selectedPrefab,
+                    screenPos,
+                    goodEffect,
+                    rectTransform,
+                    uiPos,
+                    duration,
+                    elapsed,
+                    originalScale,
+                    canvasGroup,
+                    t,
+                    scale,
+                    $async_e;
+
+                var $enumerator = new Bridge.GeneratorEnumerator(Bridge.fn.bind(this, function () {
+                    try {
+                        for (;;) {
+                            switch ($step) {
+                                case 0: {
+                                    randomIndex = UnityEngine.Random.Range(0, this.goodEffectPrefabs.length);
+                                        selectedPrefab = this.goodEffectPrefabs[randomIndex];
+                                        screenPos = UnityEngine.Camera.main.WorldToScreenPoint(worldPosition);
+                                        goodEffect = UnityEngine.Object.Instantiate(UnityEngine.GameObject, selectedPrefab, this.uiCanvas.transform);
+                                        rectTransform = goodEffect.GetComponent(UnityEngine.RectTransform);
+                                        uiPos = { v : new UnityEngine.Vector2() };
+                                        UnityEngine.RectTransformUtility.ScreenPointToLocalPointInRectangle(Bridge.as(this.uiCanvas.transform, UnityEngine.RectTransform), UnityEngine.Vector2.FromVector3(screenPos), this.uiCanvas.worldCamera, uiPos);
+                                        rectTransform.localPosition = UnityEngine.Vector3.FromVector2(uiPos.v.$clone());
+                                        duration = 0.8;
+                                        elapsed = 0.0;
+                                        originalScale = rectTransform.localScale.$clone();
+                                        canvasGroup = goodEffect.GetComponent(UnityEngine.CanvasGroup);
+                                        if (UnityEngine.MonoBehaviour.op_Equality(canvasGroup, null)) {
+                                            canvasGroup = goodEffect.AddComponent(UnityEngine.CanvasGroup);
+                                        }
+                                    $step = 1;
+                                    continue;
+                                }
+                                case 1: {
+                                    if ( elapsed < duration ) {
+                                            $step = 2;
+                                            continue;
+                                        } 
+                                        $step = 4;
+                                        continue;
+                                }
+                                case 2: {
+                                    elapsed += UnityEngine.Time.deltaTime;
+                                        t = elapsed / duration;
+                                        scale = pc.math.lerp(1.2, 0.0, t);
+                                        rectTransform.localScale = originalScale.$clone().clone().scale( scale );
+                                        canvasGroup.alpha = pc.math.lerp(1.0, 0.0, t);
+                                        $enumerator.current = null;
+                                        $step = 3;
+                                        return true;
+                                }
+                                case 3: {
+                                    
+                                        $step = 1;
+                                        continue;
+                                }
+                                case 4: {
+                                    UnityEngine.Object.Destroy(goodEffect);
+
+                                }
+                                default: {
+                                    return false;
+                                }
+                            }
+                        }
+                    } catch($async_e1) {
+                        $async_e = System.Exception.create($async_e1);
+                        throw $async_e;
+                    }
+                }));
+                return $enumerator;
+            },
+            /*PuzzleManager.ShowGoodEffect end.*/
 
 
         }
@@ -3155,11 +3248,14 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
         fields: {
             timerSlider: null,
             totalTime: 0,
-            timeLeft: 0
+            resultPanel: null,
+            timeLeft: 0,
+            isFinished: false
         },
         ctors: {
             init: function () {
                 this.totalTime = 10.0;
+                this.isFinished = false;
             }
         },
         methods: {
@@ -3168,16 +3264,24 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
                 this.timeLeft = this.totalTime;
                 this.timerSlider.maxValue = this.totalTime;
                 this.timerSlider.value = this.totalTime;
+                if (UnityEngine.GameObject.op_Inequality(this.resultPanel, null)) {
+                    this.resultPanel.SetActive(false);
+                }
             },
             /*TimerSlider.Start end.*/
 
             /*TimerSlider.Update start.*/
             Update: function () {
-                if (this.timeLeft > 0.0) {
-                    this.timeLeft -= UnityEngine.Time.deltaTime;
-                    this.timerSlider.value = this.timeLeft;
-                    if (this.timeLeft <= 0.0) {
-                        this.timeLeft = 0.0;
+                if (this.isFinished || !(this.timeLeft > 0.0)) {
+                    return;
+                }
+                this.timeLeft -= UnityEngine.Time.deltaTime;
+                this.timerSlider.value = this.timeLeft;
+                if (this.timeLeft <= 0.0) {
+                    this.timeLeft = 0.0;
+                    this.isFinished = true;
+                    if (UnityEngine.GameObject.op_Inequality(this.resultPanel, null)) {
+                        this.resultPanel.SetActive(true);
                     }
                 }
             },
@@ -3484,6 +3588,10 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
     $m("Bottle", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"FindClosestValidCase","t":8,"sn":"FindClosestValidCase","rt":Case},{"a":1,"n":"GetMouseWorldPos","t":8,"sn":"GetMouseWorldPos","rt":$n[0].Vector3},{"a":1,"n":"OnMouseDown","t":8,"sn":"OnMouseDown","rt":$n[1].Void},{"a":1,"n":"OnMouseDrag","t":8,"sn":"OnMouseDrag","rt":$n[1].Void},{"a":1,"n":"OnMouseUp","t":8,"sn":"OnMouseUp","rt":$n[1].Void},{"a":1,"n":"Start","t":8,"sn":"Start","rt":$n[1].Void},{"a":2,"n":"BottleColor","t":16,"rt":$n[0].Color,"g":{"a":2,"n":"get_BottleColor","t":8,"rt":$n[0].Color,"fg":"BottleColor"},"fn":"BottleColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"bottleColor","t":4,"rt":$n[0].Color,"sn":"bottleColor"},{"a":1,"n":"cam","t":4,"rt":$n[0].Camera,"sn":"cam"},{"a":1,"n":"dragZ","t":4,"rt":$n[1].Single,"sn":"dragZ","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":1,"n":"isDragging","t":4,"rt":$n[1].Boolean,"sn":"isDragging","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"offset","t":4,"rt":$n[0].Vector3,"sn":"offset"},{"a":1,"n":"originalCase","t":4,"rt":Case,"sn":"originalCase"},{"a":1,"n":"originalPosition","t":4,"rt":$n[0].Vector3,"sn":"originalPosition"}]}; }, $n);
     /*Bottle end.*/
 
+    /*ButtonPulse start.*/
+    $m("ButtonPulse", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"OnDisable","t":8,"sn":"OnDisable","rt":$n[1].Void},{"a":1,"n":"OnEnable","t":8,"sn":"OnEnable","rt":$n[1].Void},{"a":2,"n":"duration","t":4,"rt":$n[1].Single,"sn":"duration","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":1,"n":"originalScale","t":4,"rt":$n[0].Vector3,"sn":"originalScale"},{"a":2,"n":"scaleMultiplier","t":4,"rt":$n[1].Single,"sn":"scaleMultiplier","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}}]}; }, $n);
+    /*ButtonPulse end.*/
+
     /*Case start.*/
     $m("Case", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":2,"n":"ClearBottle","t":8,"sn":"ClearBottle","rt":$n[1].Void},{"a":2,"n":"GetCurrentBottle","t":8,"sn":"GetCurrentBottle","rt":Bottle},{"a":2,"n":"GetSnapPosition","t":8,"sn":"GetSnapPosition","rt":$n[0].Vector3},{"a":2,"n":"IsEmpty","t":8,"sn":"IsEmpty","rt":$n[1].Boolean,"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":2,"n":"SetCurrentBottle","t":8,"pi":[{"n":"bottle","pt":Bottle,"ps":0}],"sn":"SetCurrentBottle","rt":$n[1].Void,"p":[Bottle]},{"a":1,"n":"Start","t":8,"sn":"Start","rt":$n[1].Void},{"a":2,"n":"CaseColor","t":16,"rt":$n[0].Color,"g":{"a":2,"n":"get_CaseColor","t":8,"rt":$n[0].Color,"fg":"CaseColor"},"fn":"CaseColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"caseColor","t":4,"rt":$n[0].Color,"sn":"caseColor"},{"a":1,"n":"currentBottle","t":4,"rt":Bottle,"sn":"currentBottle"},{"a":2,"n":"lineIndex","t":4,"rt":$n[1].Int32,"sn":"lineIndex","box":function ($v) { return Bridge.box($v, System.Int32);}}]}; }, $n);
     /*Case end.*/
@@ -3497,7 +3605,7 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
     /*ItemCell end.*/
 
     /*PuzzleManager start.*/
-    $m("PuzzleManager", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"Awake","t":8,"sn":"Awake","rt":$n[1].Void},{"a":2,"n":"CheckAndClearLine","t":8,"pi":[{"n":"lineIndex","pt":$n[1].Int32,"ps":0}],"sn":"CheckAndClearLine","rt":$n[1].Void,"p":[$n[1].Int32]},{"a":1,"n":"ClearLine","t":8,"pi":[{"n":"line","pt":$n[3].List$1(Case),"ps":0}],"sn":"ClearLine","rt":$n[1].Void,"p":[$n[3].List$1(Case)]},{"a":1,"n":"IsColorMatch","t":8,"pi":[{"n":"a","pt":$n[0].Color,"ps":0},{"n":"b","pt":$n[0].Color,"ps":1},{"n":"tolerance","dv":0.05,"o":true,"pt":$n[1].Single,"ps":2}],"sn":"IsColorMatch","rt":$n[1].Boolean,"p":[$n[0].Color,$n[0].Color,$n[1].Single],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"IsLineMatching","t":8,"pi":[{"n":"line","pt":$n[3].List$1(Case),"ps":0}],"sn":"IsLineMatching","rt":$n[1].Boolean,"p":[$n[3].List$1(Case)],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.ContextMenu.ctor("Test Initial Lines")],"a":1,"n":"TestInitialLines","t":8,"sn":"TestInitialLines","rt":$n[1].Void},{"a":2,"n":"AllCases","t":4,"rt":$n[3].List$1(Case),"sn":"AllCases"},{"a":2,"n":"Instance","is":true,"t":4,"rt":PuzzleManager,"sn":"Instance"}]}; }, $n);
+    $m("PuzzleManager", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"Awake","t":8,"sn":"Awake","rt":$n[1].Void},{"a":2,"n":"CheckAndClearLine","t":8,"pi":[{"n":"lineIndex","pt":$n[1].Int32,"ps":0}],"sn":"CheckAndClearLine","rt":$n[1].Void,"p":[$n[1].Int32]},{"a":1,"n":"ClearLine","t":8,"pi":[{"n":"line","pt":$n[3].List$1(Case),"ps":0}],"sn":"ClearLine","rt":$n[1].Void,"p":[$n[3].List$1(Case)]},{"a":1,"n":"DropLinesAbove","t":8,"pi":[{"n":"deletedLineIndex","pt":$n[1].Int32,"ps":0}],"sn":"DropLinesAbove","rt":$n[1].Void,"p":[$n[1].Int32]},{"a":1,"n":"IsColorMatch","t":8,"pi":[{"n":"a","pt":$n[0].Color,"ps":0},{"n":"b","pt":$n[0].Color,"ps":1},{"n":"tolerance","dv":0.05,"o":true,"pt":$n[1].Single,"ps":2}],"sn":"IsColorMatch","rt":$n[1].Boolean,"p":[$n[0].Color,$n[0].Color,$n[1].Single],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"IsLineMatching","t":8,"pi":[{"n":"line","pt":$n[3].List$1(Case),"ps":0}],"sn":"IsLineMatching","rt":$n[1].Boolean,"p":[$n[3].List$1(Case)],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"ShowGoodEffect","t":8,"pi":[{"n":"worldPosition","pt":$n[0].Vector3,"ps":0}],"sn":"ShowGoodEffect","rt":$n[2].IEnumerator,"p":[$n[0].Vector3]},{"a":1,"n":"TestInitialLines","t":8,"sn":"TestInitialLines","rt":$n[1].Void},{"a":2,"n":"AllCases","t":4,"rt":$n[3].List$1(Case),"sn":"AllCases"},{"a":2,"n":"Instance","is":true,"t":4,"rt":PuzzleManager,"sn":"Instance"},{"a":2,"n":"goodEffectPrefabs","t":4,"rt":System.Array.type(UnityEngine.GameObject),"sn":"goodEffectPrefabs"},{"a":2,"n":"uiCanvas","t":4,"rt":$n[0].Canvas,"sn":"uiCanvas"}]}; }, $n);
     /*PuzzleManager end.*/
 
     /*TextHint start.*/
@@ -3505,7 +3613,7 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
     /*TextHint end.*/
 
     /*TimerSlider start.*/
-    $m("TimerSlider", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"Start","t":8,"sn":"Start","rt":$n[1].Void},{"a":1,"n":"Update","t":8,"sn":"Update","rt":$n[1].Void},{"a":1,"n":"timeLeft","t":4,"rt":$n[1].Single,"sn":"timeLeft","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":2,"n":"timerSlider","t":4,"rt":$n[5].Slider,"sn":"timerSlider"},{"a":2,"n":"totalTime","t":4,"rt":$n[1].Single,"sn":"totalTime","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}}]}; }, $n);
+    $m("TimerSlider", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"Start","t":8,"sn":"Start","rt":$n[1].Void},{"a":1,"n":"Update","t":8,"sn":"Update","rt":$n[1].Void},{"a":1,"n":"isFinished","t":4,"rt":$n[1].Boolean,"sn":"isFinished","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":2,"n":"resultPanel","t":4,"rt":$n[0].GameObject,"sn":"resultPanel"},{"a":1,"n":"timeLeft","t":4,"rt":$n[1].Single,"sn":"timeLeft","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":2,"n":"timerSlider","t":4,"rt":$n[5].Slider,"sn":"timerSlider"},{"a":2,"n":"totalTime","t":4,"rt":$n[1].Single,"sn":"totalTime","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}}]}; }, $n);
     /*TimerSlider end.*/
 
     /*UnityEngine.UI.Extensions.CasualGame.UIParticleSystem start.*/
